@@ -1,11 +1,16 @@
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
+// import { DocsLayout } from "fumadocs-ui/layouts/notebook";
 import type { ReactNode } from "react";
 import { baseOptions } from "@/app/layout.config";
 import { source } from "@/lib/source";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout tree={source.pageTree} {...baseOptions}>
+    <DocsLayout
+      tree={source.pageTree}
+      sidebar={{ prefetch: false, tabs: false }}
+      {...baseOptions}
+    >
       {children}
     </DocsLayout>
   );
