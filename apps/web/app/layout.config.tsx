@@ -43,7 +43,6 @@ export const baseOptions: BaseLayoutProps = {
       text: "About",
       url: "/about",
       active: "nested-url",
-      secondary: true,
     },
   ],
 };
