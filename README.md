@@ -4,6 +4,8 @@ A modern, production-ready SaaS starter with built-in auth, teams, subscriptions
 
 ## The Problem
 
+Let's discuss here on the [Problem](https://github.com/rjvim/saas-foundations/issues/1)
+
 Building a SaaS product requires numerous peripheral features beyond your core offering:
 
 - Authentication
@@ -19,6 +21,8 @@ These features are essential but time-consuming to build from scratch for each n
 SaaS Foundations provides all these capabilities out of the box, allowing you to focus on your unique product features.
 
 ## Tech Stack
+
+Let's discuss here on the [Tech Stack](https://github.com/rjvim/saas-foundations/issues/2)
 
 - **Framework**: Next.js App Router
 - **UI**: Tailwind CSS, shadcn/ui
