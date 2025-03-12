@@ -33,12 +33,17 @@ export const baseOptions: BaseLayoutProps = {
     {
       text: "Blog",
       url: "/blog",
-      active: "nested-url",
+    },
+    {
+      text: "Roadmap",
+      url: "https://github.com/users/rjvim/projects/2/views/1",
+      secondary: true,
     },
     {
       text: "About",
       url: "/about",
       active: "nested-url",
+      secondary: true,
     },
   ],
 };
