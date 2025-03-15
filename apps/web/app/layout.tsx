@@ -25,6 +25,15 @@ export default function Layout({ children }: { children: ReactNode }) {
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          crossOrigin="anonymous"
+          src="//cdn.jsdelivr.net/npm/meta-scan/dist/auto.global.js"
+          data-auto-enable={
+            process.env.NODE_ENV === "development" ? "true" : "false"
+          }
+        />
+      </head>
       <body className="flex flex-col min-h-screen">
         <RootProvider>{children}</RootProvider>
       </body>
