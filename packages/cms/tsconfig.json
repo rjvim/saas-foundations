@@ -1,8 +1,31 @@
 {
-  "extends": "@saas-foundations/typescript-config/react-library.json",
+  "extends": "@saas-foundations/typescript-config/nextjs.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "declaration": false,
+    "declarationMap": false,
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/.source": [
+        "./.source/index.ts"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.mjs",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

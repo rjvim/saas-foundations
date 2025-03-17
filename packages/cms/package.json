@@ -2,12 +2,16 @@
   "name": "@saas-foundations/cms",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "exports": {
-    "./*": "./src/*.tsx"
+    "./source": "./src/source.ts",
+    "./docs/page": "./src/docs/page.tsx",
+    "./docs/layout": "./src/docs/layout.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "postinstall": "fumadocs-mdx"
   },
   "devDependencies": {
     "@saas-foundations/eslint-config": "workspace:*",
@@ -20,6 +24,11 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@types/mdx": "^2.0.13",
+    "fumadocs-core": "^15.0.15",
+    "fumadocs-mdx": "^11.5.6",
+    "fumadocs-ui": "^15.0.15",
+    "next": "^15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
