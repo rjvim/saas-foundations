@@ -1,7 +1,7 @@
 import { createMDX } from "fumadocs-mdx/next";
 
 const withMDX = createMDX({
-  configPath: "../../packages/cms/source.config.ts",
+  configPath: "../../foundations/cms/source.config.ts",
 });
 
 /** @type {import('next').NextConfig} */

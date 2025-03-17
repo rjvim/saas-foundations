@@ -59,7 +59,7 @@ importers:
     dependencies:
       '@saas-foundations/cms':
         specifier: workspace:*
-        version: link:../../packages/cms
+        version: link:../../foundations/cms
       '@saas-foundations/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -126,7 +126,7 @@ importers:
     dependencies:
       '@saas-foundations/cms':
         specifier: workspace:*
-        version: link:../../packages/cms
+        version: link:../../foundations/cms
       '@saas-foundations/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -253,7 +253,59 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  packages/cms:
+  foundations/cms:
+    dependencies:
+      '@saas-foundations/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@types/mdx':
+        specifier: ^2.0.13
+        version: 2.0.13
+      fumadocs-core:
+        specifier: ^15.0.15
+        version: 15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      fumadocs-mdx:
+        specifier: ^11.5.6
+        version: 11.5.6(acorn@8.14.1)(fumadocs-core@15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+      fumadocs-ui:
+        specifier: ^15.0.15
+        version: 15.0.15(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(fumadocs-core@15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@4.0.13)
+      next:
+        specifier: ^15.2.1
+        version: 15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@saas-foundations/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@saas-foundations/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@turbo/gen':
+        specifier: ^2.4.4
+        version: 2.4.4(@types/node@22.13.9)(typescript@5.8.2)
+      '@types/node':
+        specifier: ^22.13.9
+        version: 22.13.9
+      '@types/react':
+        specifier: 19.0.10
+        version: 19.0.10
+      '@types/react-dom':
+        specifier: 19.0.4
+        version: 19.0.4(@types/react@19.0.10)
+      eslint:
+        specifier: ^9.22.0
+        version: 9.22.0(jiti@2.4.2)
+      typescript:
+        specifier: 5.8.2
+        version: 5.8.2
+
+  packages/content:
     dependencies:
       '@saas-foundations/ui':
         specifier: workspace:*
