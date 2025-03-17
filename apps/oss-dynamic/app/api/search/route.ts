@@ -1,3 +1,3 @@
-import { GET } from "@saas-foundations/cms/search";
+import { GET } from "@saas-foundations/cms/search-dynamic";
 
 export { GET };
