@@ -1,4 +1,3 @@
-import { source } from '@/lib/source';
-import { createFromSource } from 'fumadocs-core/search/server';
+import { GET } from "@saas-foundations/cms/search";
 
-export const { GET } = createFromSource(source);
+export { GET };

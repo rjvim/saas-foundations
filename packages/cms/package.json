@@ -5,6 +5,7 @@
   "type": "module",
   "exports": {
     "./source": "./src/source.ts",
+    "./search": "./src/search.ts",
     "./docs/page": "./src/docs/page.tsx",
     "./docs/layout": "./src/docs/layout.tsx"
   },
