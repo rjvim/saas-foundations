@@ -10,4 +10,4 @@
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
-@source '../../../content/**/*.mdx';
+@source '../../../packages/cms/content/**/*.mdx';

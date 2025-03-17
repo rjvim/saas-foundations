@@ -7,12 +7,12 @@ import {
 import { z } from "zod";
 
 export const docs = defineDocs({
-  dir: "../../content/docs",
+  dir: "../../packages/cms/content/docs",
 });
 
 export const blogPosts = defineCollections({
   type: "doc",
-  dir: "../../content/blog",
+  dir: "../../packages/cms/content/blog",
   schema: frontmatterSchema.extend({
     author: z.string(),
     date: z.string().date().or(z.date()),

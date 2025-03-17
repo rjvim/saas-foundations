@@ -255,6 +255,9 @@ importers:
 
   packages/cms:
     dependencies:
+      '@saas-foundations/ui':
+        specifier: workspace:*
+        version: link:../ui
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13

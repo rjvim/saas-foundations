@@ -26,6 +26,7 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@saas-foundations/ui": "workspace:*",
     "@types/mdx": "^2.0.13",
     "fumadocs-core": "^15.0.15",
     "fumadocs-mdx": "^11.5.6",
