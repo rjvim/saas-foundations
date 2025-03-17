@@ -82,6 +82,12 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.0
+      '@saas-foundations/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@saas-foundations/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.0.13
