@@ -24,25 +24,4 @@ export const baseOptions: BaseLayoutProps = {
       </>
     ),
   },
-  links: [
-    {
-      text: "Documentation",
-      url: "/docs",
-      active: "nested-url",
-    },
-    {
-      text: "Blog",
-      url: "/blog",
-    },
-    {
-      text: "Roadmap",
-      url: "https://github.com/users/rjvim/projects/2/views/1",
-      secondary: true,
-    },
-    {
-      text: "About",
-      url: "/about",
-      active: "nested-url",
-    },
-  ],
 };
