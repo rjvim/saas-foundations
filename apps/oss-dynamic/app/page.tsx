@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@saas-foundations/ui/button";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,12 @@ export default function HomePage() {
         </Link>{" "}
         and see the documentation.
       </p>
+      <Button
+        className="bg-red-300 p-2 max-w-sm rounded cursor-pointer"
+        appName="oss-dynamic"
+      >
+        Click Me
+      </Button>
     </main>
   );
 }
