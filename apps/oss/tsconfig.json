@@ -1,21 +1,14 @@
 {
   "extends": "@saas-foundations/typescript-config/nextjs.json",
   "compilerOptions": {
-    "declaration": false,
-    "declarationMap": false,
-    "noEmit": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/.source": [
-        "./.source/index.ts"
-      ],
-      "@/*": [
-        "./*"
-      ]
+      "@/.source": ["./.source/index.ts"],
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -25,7 +18,5 @@
     "next.config.mjs",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
