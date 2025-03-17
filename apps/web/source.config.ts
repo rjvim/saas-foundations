@@ -13,9 +13,7 @@ export const docs = defineDocs({
 export const blogPosts = defineCollections({
   type: "doc",
   dir: "../../content/blog",
-  // add required frontmatter properties
   schema: frontmatterSchema.extend({
-    slug: z.string(),
     author: z.string(),
     date: z.string().date().or(z.date()),
   }),
