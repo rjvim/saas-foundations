@@ -10,9 +10,9 @@
     "web:dev": "turbo run dev --filter=web",
     "web:build": "turbo run build --filter=web",
     "web:start": "turbo run start --filter=web",
-    "oss:dev": "turbo run dev --filter=oss",
-    "oss:build": "turbo run build --filter=oss",
-    "oss:start": "turbo run start --filter=oss"
+    "oss-dynamic:dev": "turbo run dev --filter=oss-dynamic",
+    "oss-dynamic:build": "turbo run build --filter=oss-dynamic",
+    "oss-dynamic:start": "turbo run start --filter=oss-dynamic"
   },
   "devDependencies": {
     "prettier": "^3.5.3",

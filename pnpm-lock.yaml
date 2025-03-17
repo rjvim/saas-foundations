@@ -55,7 +55,7 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  apps/oss:
+  apps/oss-dynamic:
     dependencies:
       '@saas-foundations/cms':
         specifier: workspace:*
