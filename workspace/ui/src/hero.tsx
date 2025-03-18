@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "@foundations/shadcn/components/button";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -151,6 +152,7 @@ export default function Hero() {
               <a href="#" className="text-sm/6 font-semibold text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
               </a>
+              <Button>This is a ShadCN button</Button>
             </div>
           </div>
         </div>

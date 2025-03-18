@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./globals.css": "./src/styles/globals.css",
     "./source": "./src/source.ts",
     "./search-dynamic": "./src/search-dynamic.ts",
     "./search-static": "./src/search-static.ts",

@@ -5,8 +5,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Import styles */
+
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
+@import "@foundations/shadcn/globals.css";
+
+/* Import Sources */
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 

@@ -474,6 +474,9 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
+      '@foundations/shadcn':
+        specifier: workspace:*
+        version: link:../../foundations/shadcn
       '@turbo/gen':
         specifier: ^2.4.4
         version: 2.4.4(@types/node@22.13.9)(typescript@5.8.2)
