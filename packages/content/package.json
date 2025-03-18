@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "clean": "rm -rf node_modules",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit"
   },

@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "clean": "rm -rf node_modules",
     "dev": "next dev --turbopack --port 3000",
     "build": "next build",
     "start": "next start",

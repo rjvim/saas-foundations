@@ -11,6 +11,7 @@
     "./docs/layout": "./src/docs/layout.tsx"
   },
   "scripts": {
+    "clean": "rm -rf node_modules",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit",
     "postinstall": "fumadocs-mdx"
