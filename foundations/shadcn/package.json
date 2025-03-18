@@ -1,5 +1,5 @@
 {
-  "name": "@saas-foundations/shadcn",
+  "name": "@foundations/shadcn",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -24,8 +24,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@saas-foundations/eslint-config": "workspace:*",
-    "@saas-foundations/typescript-config": "workspace:*",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
     "tailwindcss": "^4.0.8",
     "typescript": "^5.7.3"
   },

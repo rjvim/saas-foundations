@@ -20,9 +20,9 @@ importers:
 
   apps/docs:
     dependencies:
-      '@saas-foundations/ui':
+      '@workspace/ui':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../workspace/ui
       next:
         specifier: ^15.2.1
         version: 15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -33,12 +33,6 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^22.13.9
         version: 22.13.9
@@ -48,6 +42,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../workspace/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../workspace/typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -57,12 +57,12 @@ importers:
 
   apps/oss-dynamic:
     dependencies:
-      '@saas-foundations/cms':
+      '@foundations/cms':
         specifier: workspace:*
         version: link:../../foundations/cms
-      '@saas-foundations/ui':
+      '@foundations/shadcn':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../foundations/shadcn
       '@standard-schema/spec':
         specifier: ^1.0.0
         version: 1.0.0
@@ -72,6 +72,9 @@ importers:
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../workspace/ui
       fumadocs-core:
         specifier: ^15.0.15
         version: 15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -100,12 +103,6 @@ importers:
         specifier: ^3.24.2
         version: 3.24.2
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^22.13.9
         version: 22.13.9
@@ -115,6 +112,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../workspace/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../workspace/typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -124,12 +127,9 @@ importers:
 
   apps/oss-static:
     dependencies:
-      '@saas-foundations/cms':
+      '@foundations/cms':
         specifier: workspace:*
         version: link:../../foundations/cms
-      '@saas-foundations/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       '@standard-schema/spec':
         specifier: ^1.0.0
         version: 1.0.0
@@ -139,6 +139,9 @@ importers:
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../workspace/ui
       fumadocs-core:
         specifier: ^15.0.15
         version: 15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -167,12 +170,6 @@ importers:
         specifier: ^3.24.2
         version: 3.24.2
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^22.13.9
         version: 22.13.9
@@ -182,6 +179,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../workspace/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../workspace/typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -191,9 +194,6 @@ importers:
 
   apps/web:
     dependencies:
-      '@saas-foundations/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       '@standard-schema/spec':
         specifier: ^1.0.0
         version: 1.0.0
@@ -203,6 +203,9 @@ importers:
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../workspace/ui
       fumadocs-core:
         specifier: ^15.0.15
         version: 15.0.15(@types/react@19.0.10)(next@15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -231,12 +234,6 @@ importers:
         specifier: ^3.24.2
         version: 3.24.2
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^22.13.9
         version: 22.13.9
@@ -246,6 +243,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../workspace/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../workspace/typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -255,12 +258,12 @@ importers:
 
   foundations/cms:
     dependencies:
-      '@saas-foundations/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../workspace/ui
       fumadocs-core:
         specifier: ^15.0.15
         version: 15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -280,12 +283,6 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@turbo/gen':
         specifier: ^2.4.4
         version: 2.4.4(@types/node@22.13.9)(typescript@5.8.2)
@@ -298,6 +295,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../workspace/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../workspace/typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -338,12 +341,6 @@ importers:
         specifier: ^3.24.2
         version: 3.24.2
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
         specifier: ^4.0.8
         version: 4.0.13
@@ -359,6 +356,12 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../../workspace/eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../../workspace/typescript-config
       tailwindcss:
         specifier: ^4.0.8
         version: 4.0.13
@@ -366,14 +369,14 @@ importers:
         specifier: ^5.7.3
         version: 5.8.2
 
-  packages/content:
+  workspace/content:
     dependencies:
-      '@saas-foundations/ui':
-        specifier: workspace:*
-        version: link:../ui
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../ui
       fumadocs-core:
         specifier: ^15.0.15
         version: 15.0.15(@types/react@19.0.10)(next@15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -393,12 +396,6 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@turbo/gen':
         specifier: ^2.4.4
         version: 2.4.4(@types/node@22.13.9)(typescript@5.8.2)
@@ -411,6 +408,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -418,7 +421,7 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  packages/eslint-config:
+  workspace/eslint-config:
     devDependencies:
       '@eslint/js':
         specifier: ^9.22.0
@@ -454,9 +457,9 @@ importers:
         specifier: ^8.26.0
         version: 8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
 
-  packages/typescript-config: {}
+  workspace/typescript-config: {}
 
-  packages/ui:
+  workspace/ui:
     dependencies:
       '@headlessui/react':
         specifier: ^2.2.0
@@ -471,12 +474,6 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@saas-foundations/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@saas-foundations/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@turbo/gen':
         specifier: ^2.4.4
         version: 2.4.4(@types/node@22.13.9)(typescript@5.8.2)
@@ -489,6 +486,12 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.10)
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
@@ -4943,7 +4946,7 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 20.17.24
+      '@types/node': 22.13.9
 
   '@types/tinycolor2@1.4.6': {}
 

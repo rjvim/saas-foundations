@@ -1,9 +1,9 @@
 {
-  "extends": "@saas-foundations/typescript-config/react-library.json",
+  "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@saas-foundations/shadcn/*": [
+      "@foundations/shadcn/*": [
         "./src/*"
       ]
     }

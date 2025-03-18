@@ -1,3 +1,3 @@
-import Layout from "@saas-foundations/cms/docs/layout";
+import Layout from "@foundations/cms/docs/layout";
 
 export default Layout;

@@ -4,8 +4,7 @@
     "outDir": "dist"
   },
   "include": [
-    "src",
-    "turbo"
+    "src"
   ],
   "exclude": [
     "node_modules",

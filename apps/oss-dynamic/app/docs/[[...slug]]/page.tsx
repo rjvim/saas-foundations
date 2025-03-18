@@ -1,7 +1,7 @@
 import Page, {
   generateStaticParams,
   generateMetadata,
-} from "@saas-foundations/cms/docs/page";
+} from "@foundations/cms/docs/page";
 
 export default Page;
 

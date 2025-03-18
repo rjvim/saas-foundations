@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@saas-foundations/ui/button";
-import Hero from "@saas-foundations/ui/hero";
+import { Button } from "@workspace/ui/button";
+import Hero from "@workspace/ui/hero";
 
 export default function HomePage() {
   return <Hero />;

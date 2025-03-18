@@ -1,4 +1,4 @@
-import { source } from "@saas-foundations/cms/source";
+import { source } from "@foundations/cms/source";
 import {
   DocsPage,
   DocsBody,

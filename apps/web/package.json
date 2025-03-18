@@ -13,7 +13,7 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
-    "@saas-foundations/ui": "workspace:*",
+    "@workspace/ui": "workspace:*",
     "@standard-schema/spec": "^1.0.0",
     "@tailwindcss/postcss": "^4.0.13",
     "@types/mdx": "^2.0.13",
@@ -28,8 +28,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@saas-foundations/eslint-config": "workspace:*",
-    "@saas-foundations/typescript-config": "workspace:*",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
     "@types/node": "^22.13.9",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",

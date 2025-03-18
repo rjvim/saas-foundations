@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@saas-foundations/shadcn/components",
-    "utils": "@saas-foundations/shadcn/lib/utils",
-    "hooks": "@saas-foundations/shadcn/hooks",
-    "lib": "@saas-foundations/shadcn/lib",
-    "ui": "@saas-foundations/shadcn/components"
+    "components": "@foundations/shadcn/components",
+    "utils": "@foundations/shadcn/lib/utils",
+    "hooks": "@foundations/shadcn/hooks",
+    "lib": "@foundations/shadcn/lib",
+    "ui": "@foundations/shadcn/components"
   }
 }
