@@ -26,13 +26,13 @@ export default function Layout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <head>
-        <script
+        {/* <script
           crossOrigin="anonymous"
           src="//cdn.jsdelivr.net/npm/meta-scan@0.5.8/dist/auto.global.js"
           data-auto-enable={
             process.env.NODE_ENV === "development" ? "true" : "false"
           }
-        />
+        /> */}
       </head>
       <body className="flex flex-col min-h-screen">
         <RootProvider>{children}</RootProvider>
