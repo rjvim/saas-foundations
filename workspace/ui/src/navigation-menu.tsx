@@ -58,7 +58,9 @@ export function NavigationMenuDemo() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent hover:bg-transparent focus:bg-transparent hover:opacity-90">
+              Getting started
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -89,7 +91,9 @@ export function NavigationMenuDemo() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-transparent">
+              Components
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {components.map((component) => (
@@ -107,7 +111,9 @@ export function NavigationMenuDemo() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={navigationMenuTriggerStyle({
+                className: "bg-transparent",
+              })}
             >
               <Link href="/docs">Documentation</Link>
             </NavigationMenuLink>

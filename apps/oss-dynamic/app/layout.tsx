@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import type { ReactNode } from "react";
+import { cn } from "@foundations/shadcn/lib/utils";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +35,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           }
         /> */}
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body
+        className={cn("bg-background overscroll-none font-sans antialiased")}
+      >
         <RootProvider>{children}</RootProvider>
       </body>
     </html>
