@@ -58,7 +58,7 @@ export function NavigationMenuDemo() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent hover:bg-transparent focus:bg-transparent hover:opacity-90">
+            <NavigationMenuTrigger className="bg-transparent hover:bg-transparent  focus:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent data-[state=open]:bg-transparent/50">
               Getting started
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -91,7 +91,7 @@ export function NavigationMenuDemo() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent">
+            <NavigationMenuTrigger className="bg-transparent hover:bg-transparent  focus:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent data-[state=open]:bg-transparent/50">
               Components
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -112,7 +112,8 @@ export function NavigationMenuDemo() {
             <NavigationMenuLink
               asChild
               className={navigationMenuTriggerStyle({
-                className: "bg-transparent",
+                className:
+                  "bg-transparent hover:bg-transparent  focus:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent data-[state=open]:bg-transparent/50",
               })}
             >
               <Link href="/docs">Documentation</Link>
