@@ -91,7 +91,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50">
+    <footer className="bg-gray-200">
       <div className="relative isolate mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pt-24 lg:pt-32">
         <GridBackground maxWidthClass="max-w-7xl" />
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
