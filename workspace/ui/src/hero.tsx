@@ -8,7 +8,7 @@ import { NavigationMenuDemo } from "@workspace/ui/navigation-menu";
 import { GridBackground } from "@workspace/ui/grid-background";
 import Footer from "@workspace/ui/footer";
 import StripeCanvas from "@workspace/ui/StripeCanvas";
-import phoneImg from "@workspace/ui/stripe/phone.svg";
+import phoneImg from "./stripe/phone.svg";
 import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@foundations/shadcn/lib/utils";
 // import StickySections from "@workspace/ui/stick-sections-2";
