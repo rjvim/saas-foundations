@@ -1,10 +1,32 @@
 {
   "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/ui/*": [
+        "./src/*"
+      ],
+      "@workspace/ui/stripe/*": [
+        "./src/stripe/*"
+      ]
+    },
+    "types": [
+      "next"
+    ],
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
   "include": [
-    "src"
+    ".",
+    "types.d.ts"
   ],
   "exclude": [
     "node_modules",

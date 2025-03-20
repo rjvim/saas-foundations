@@ -1,4 +1,4 @@
-import { GridBackground } from "./grid-background";
+import { GridBackground } from "@workspace/ui/grid-background";
 
 const navigation = {
   solutions: [

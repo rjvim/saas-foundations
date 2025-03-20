@@ -4,62 +4,22 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "@foundations/shadcn/components/button";
-import { NavigationMenuDemo } from "./navigation-menu";
-import { GridBackground } from "./grid-background";
-import Footer from "./footer";
-import StripeCanvas from "./StripeCanvas";
-import Image from "next/image";
-import phoneImg from "./stripe/phone.svg";
-import { ArrowDownIcon, ArrowRightIcon, ArrowUpIcon } from "lucide-react";
+import { NavigationMenuDemo } from "@workspace/ui/navigation-menu";
+import { GridBackground } from "@workspace/ui/grid-background";
+import Footer from "@workspace/ui/footer";
+import StripeCanvas from "@workspace/ui/StripeCanvas";
+import phoneImg from "@workspace/ui/stripe/phone.svg";
+import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@foundations/shadcn/lib/utils";
-import StickySections from "./stick-sections-2";
-import { PPScrollerSection } from "./PPScrollerSection";
-import StickyScroll from "./sticky-scroll";
+// import StickySections from "@workspace/ui/stick-sections-2";
+import StickyScroll from "@workspace/ui/sticky-scroll";
+import Image from "next/image";
 
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
-];
-
-const features = [
-  {
-    id: 1,
-    badge: "Integrated Knowledge",
-    title: "Support your users with popular topics",
-    description:
-      "Statistics show that people browsing your webpage who receive live assistance with a chat widget are more likely to make a purchase.",
-    image:
-      "https://raw.githubusercontent.com/cruip/cruip-tutorials/refs/heads/main/sticky-scrolling/illustration-04.png",
-  },
-  {
-    id: 2,
-    badge: "Authentic Experiences",
-    title: "Personalise the support experience",
-    description:
-      "Statistics show that people browsing your webpage who receive live assistance with a chat widget are more likely to make a purchase.",
-    image:
-      "https://raw.githubusercontent.com/cruip/cruip-tutorials/refs/heads/main/sticky-scrolling/illustration-01.png",
-  },
-  {
-    id: 3,
-    badge: "Live Assistance",
-    title: "Scale your sales using automation",
-    description:
-      "Statistics show that people browsing your webpage who receive live assistance with a chat widget are more likely to make a purchase.",
-    image:
-      "https://raw.githubusercontent.com/cruip/cruip-tutorials/refs/heads/main/sticky-scrolling/illustration-02.png",
-  },
-  {
-    id: 4,
-    badge: "Satisfaction Guaranteed",
-    title: "Make customer satisfaction easier",
-    description:
-      "Statistics show that people browsing your webpage who receive live assistance with a chat widget are more likely to make a purchase.",
-    image:
-      "https://raw.githubusercontent.com/cruip/cruip-tutorials/refs/heads/main/sticky-scrolling/illustration-03.png",
-  },
 ];
 
 export default function Hero() {
