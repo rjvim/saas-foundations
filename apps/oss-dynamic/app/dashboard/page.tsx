@@ -1,7 +1,8 @@
+import { JsonViewer } from "@/components/ui/json-viewer";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { JsonViewer } from "@/components/ui/json-viewer";
+import UserCard from "./user-card";
 
 export default async function DashboardPage() {
   const [session, activeSessions, deviceSessions, organization] =
@@ -37,6 +38,8 @@ export default async function DashboardPage() {
         <JsonViewer data={deviceSessions} title="Device Sessions" />
         <JsonViewer data={organization} title="Organization" />
       </div>
+
+      <UserCard />
     </div>
   );
 }
