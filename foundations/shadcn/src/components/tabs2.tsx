@@ -143,11 +143,7 @@ export const FadeInDiv = ({
               type: "keyframes",
             },
           }}
-          className={cn(
-            "w-50 h-full",
-            isActive(tab) ? "" : "hidden",
-            className
-          )}
+          className={cn("h-full", isActive(tab) ? "" : "hidden", className)}
         >
           {tab.content}
         </motion.div>

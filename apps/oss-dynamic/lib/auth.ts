@@ -2,6 +2,7 @@ import { betterAuth } from "better-auth";
 import { createPool } from "mysql2";
 import { Pool } from "pg";
 import { Kysely, MysqlDialect, PostgresDialect } from "kysely";
+import { multiSession, organization } from "better-auth/plugins";
 
 // const dialect = new MysqlDialect({
 //   pool: createPool({
@@ -33,4 +34,5 @@ export const auth = betterAuth({
     dialect,
     type: "postgres",
   },
+  plugins: [multiSession(), organization({})],
 });
