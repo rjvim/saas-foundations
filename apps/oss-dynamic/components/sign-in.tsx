@@ -84,7 +84,7 @@ export default function SignIn() {
               await signIn.email({
                 email,
                 password,
-                callbackURL: "/dashboard",
+                callbackURL: "/",
               });
             }}
           >
