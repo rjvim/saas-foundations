@@ -16,7 +16,7 @@ updates:
     ignore:
       # Ignore major updates for all packages
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     # Specify the packages you want to update
     allow:
       - dependency-name: "fumadocs-core"
@@ -51,7 +51,7 @@ updates:
         update-type: "semver:patch"
     ignore:
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     allow:
       - dependency-name: "fumadocs-core"
       - dependency-name: "fumadocs-mdx"
@@ -84,7 +84,7 @@ updates:
         update-type: "semver:patch"
     ignore:
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     allow:
       - dependency-name: "fumadocs-core"
       - dependency-name: "fumadocs-mdx"
@@ -117,7 +117,7 @@ updates:
         update-type: "semver:patch"
     ignore:
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     allow:
       - dependency-name: "fumadocs-core"
       - dependency-name: "fumadocs-mdx"
@@ -151,7 +151,7 @@ updates:
         update-type: "semver:patch"
     ignore:
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     allow:
       - dependency-name: "lucide-react"
       - dependency-name: "tailwindcss"
@@ -177,7 +177,7 @@ updates:
         update-type: "semver:patch"
     ignore:
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     allow:
       - dependency-name: "fumadocs-core"
       - dependency-name: "fumadocs-mdx"
@@ -200,7 +200,7 @@ updates:
         update-type: "semver:patch"
     ignore:
       - dependency-name: "*"
-        update-types: ["version-update:semver:major"]
+        update-types: ["version-update:semver-major"]
     allow:
       - dependency-name: "next"
       - dependency-name: "react"
