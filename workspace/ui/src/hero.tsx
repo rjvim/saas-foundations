@@ -14,6 +14,7 @@ import { cn } from "@foundations/shadcn/lib/utils";
 // import StickySections from "@workspace/ui/stick-sections-2";
 import StickyScroll from "@workspace/ui/sticky-scroll";
 import Image from "next/image";
+import { FloatingPaths } from "@foundations/shadcn/components/kokonutui/background-paths";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -26,7 +27,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div>
       <header className="absolute inset-x-0 top-0 z-50 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <nav
           aria-label="Global"
@@ -113,11 +114,17 @@ export default function Hero() {
         </Dialog>
       </header>
 
-      <StripeCanvas />
+      {/* <StripeCanvas /> */}
+      {/* <BackgroundPaths /> */}
+
+      {/* <FloatingPaths position={-1} /> */}
 
       <div className="relative flex w-full flex-col items-center px-5 overflow-x-hidden">
         <div className="relative isolate mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative grid-cols-1 pb-24 pt-32 md:grid-cols-[max(50%,400px)_1fr] grid mx-auto">
           <GridBackground maxWidthClass="max-w-7xl" />
+
+          <FloatingPaths position={-1} color="text-cyan-500" />
+          <FloatingPaths position={-2} color="text-blue-500" />
 
           <div className="space-y-8 sm:px-4">
             <div className="flex h-6 w-fit items-center gap-2 whitespace-nowrap rounded-full bg-black/30 py-0.5 pl-3 pr-3 text-xs font-semibold text-white backdrop-blur">

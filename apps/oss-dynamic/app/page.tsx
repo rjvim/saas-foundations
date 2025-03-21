@@ -6,8 +6,7 @@ import AppHeader from "@/components/app-header";
 export default function HomePage() {
   return (
     <>
-      <AppHeader />
-      {/* <Hero /> */}
+      <Hero />
     </>
   );
 }
