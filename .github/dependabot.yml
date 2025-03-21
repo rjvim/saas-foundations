@@ -1,0 +1,210 @@
+version: 2
+updates:
+  # Apps directory packages
+  - package-ecosystem: "npm"
+    directory: "/apps/oss-dynamic"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      # Only allow minor and patch updates
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      # Ignore major updates for all packages
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    # Specify the packages you want to update
+    allow:
+      - dependency-name: "fumadocs-core"
+      - dependency-name: "fumadocs-mdx"
+      - dependency-name: "fumadocs-ui"
+      - dependency-name: "next"
+      - dependency-name: "tailwindcss"
+      - dependency-name: "tw-animate-css"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "lucide-react"
+      - dependency-name: "better-auth"
+      - dependency-name: "@tailwindcss/postcss"
+      - dependency-name: "@types/mdx"
+      - dependency-name: "postcss"
+      - dependency-name: "kysely"
+      - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
+      - dependency-name: "zod"
+      - dependency-name: "tailwind-merge"
+
+  - package-ecosystem: "npm"
+    directory: "/apps/oss-static"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    allow:
+      - dependency-name: "fumadocs-core"
+      - dependency-name: "fumadocs-mdx"
+      - dependency-name: "fumadocs-ui"
+      - dependency-name: "next"
+      - dependency-name: "tailwindcss"
+      - dependency-name: "tw-animate-css"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "lucide-react"
+      - dependency-name: "better-auth"
+      - dependency-name: "@tailwindcss/postcss"
+      - dependency-name: "@types/mdx"
+      - dependency-name: "postcss"
+      - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
+      - dependency-name: "zod"
+      - dependency-name: "tailwind-merge"
+
+  - package-ecosystem: "npm"
+    directory: "/apps/web"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    allow:
+      - dependency-name: "fumadocs-core"
+      - dependency-name: "fumadocs-mdx"
+      - dependency-name: "fumadocs-ui"
+      - dependency-name: "next"
+      - dependency-name: "tailwindcss"
+      - dependency-name: "tw-animate-css"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "lucide-react"
+      - dependency-name: "better-auth"
+      - dependency-name: "@tailwindcss/postcss"
+      - dependency-name: "@types/mdx"
+      - dependency-name: "postcss"
+      - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
+      - dependency-name: "zod"
+      - dependency-name: "tailwind-merge"
+
+  - package-ecosystem: "npm"
+    directory: "/apps/docs"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    allow:
+      - dependency-name: "fumadocs-core"
+      - dependency-name: "fumadocs-mdx"
+      - dependency-name: "fumadocs-ui"
+      - dependency-name: "next"
+      - dependency-name: "tailwindcss"
+      - dependency-name: "tw-animate-css"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "lucide-react"
+      - dependency-name: "better-auth"
+      - dependency-name: "@tailwindcss/postcss"
+      - dependency-name: "@types/mdx"
+      - dependency-name: "postcss"
+      - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
+      - dependency-name: "zod"
+      - dependency-name: "tailwind-merge"
+
+  # Foundations directory packages
+  - package-ecosystem: "npm"
+    directory: "/foundations/shadcn"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    allow:
+      - dependency-name: "lucide-react"
+      - dependency-name: "tailwindcss"
+      - dependency-name: "tw-animate-css"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "@tailwindcss/postcss"
+      - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
+      - dependency-name: "zod"
+      - dependency-name: "tailwind-merge"
+
+  - package-ecosystem: "npm"
+    directory: "/foundations/cms"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    allow:
+      - dependency-name: "fumadocs-core"
+      - dependency-name: "fumadocs-mdx"
+      - dependency-name: "fumadocs-ui"
+      - dependency-name: "@types/mdx"
+      - dependency-name: "kysely"
+      - dependency-name: "zod"
+
+  # Workspace directory packages
+  - package-ecosystem: "npm"
+    directory: "/workspace/ui"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver:major"]
+    allow:
+      - dependency-name: "next"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "lucide-react"
+      - dependency-name: "@types/react"
+      - dependency-name: "@types/react-dom"
