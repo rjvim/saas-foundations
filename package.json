@@ -16,7 +16,8 @@
     "oss-dynamic:start": "turbo run start --filter=oss-dynamic",
     "oss-static:dev": "turbo run dev --filter=oss-static",
     "oss-static:build": "turbo run build --filter=oss-static",
-    "oss-static:start": "turbo run start --filter=oss-static"
+    "oss-static:start": "turbo run start --filter=oss-static",
+    "update-common-packages": "pnpm update fumadocs-core fumadocs-mdx fumadocs-ui next tailwindcss tw-animate-css react react-dom lucide-react better-auth @tailwindcss/postcss @types/mdx postcss kysely @types/react @types/react-dom zod tailwind-merge --recursive"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
