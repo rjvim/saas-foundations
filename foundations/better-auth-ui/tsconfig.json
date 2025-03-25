@@ -1,0 +1,22 @@
+{
+  "extends": "@workspace/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@foundations/better-auth-ui/*": ["./src/*"]
+    },
+    "types": ["next"],
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": [".", "types.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

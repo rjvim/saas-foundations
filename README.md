@@ -55,3 +55,5 @@ Follow the development journey on Twitter: [x.com/rjv_im](https://x.com/rjv_im)
 ## License
 
 MIT
+
+npx open-code-cli pull https://github.com/daveyplate/better-auth-ui/tree/main/src src

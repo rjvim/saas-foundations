@@ -21,24 +21,23 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en" suppressHydrationWarning>
       <head>
-        {/* <script
+        <script
           crossOrigin="anonymous"
-          src="//cdn.jsdelivr.net/npm/meta-scan@0.5.8/dist/auto.global.js"
+          src="//cdn.jsdelivr.net/npm/meta-scan@0.10.0/dist/auto.global.js"
           data-auto-enable={
             process.env.NODE_ENV === "development" ? "true" : "false"
           }
-        /> */}
+        />
       </head>
       <body
-        className={cn("bg-background overscroll-none font-sans antialiased")}
+        className={cn(
+          "bg-background overscroll-none font-sans antialiased",
+          `${geistSans.variable} ${geistMono.variable}`
+        )}
       >
-        <RootProvider>{children}</RootProvider>
+        {children}
       </body>
     </html>
   );
