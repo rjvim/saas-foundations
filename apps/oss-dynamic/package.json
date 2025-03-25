@@ -12,6 +12,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@daveyplate/better-auth-ui": "^1.2.42",
     "@foundations/cms": "workspace:*",
     "@foundations/shadcn": "workspace:*",
     "@libsql/kysely-libsql": "^0.4.1",
@@ -41,6 +42,7 @@
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.12",
     "@types/react-dom": "19.0.4",
+    "@workspace/auth": "workspace:*",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
     "eslint": "^9.22.0",
