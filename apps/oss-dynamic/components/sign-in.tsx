@@ -78,7 +78,7 @@ export default function SignIn() {
 
           <Button
             type="submit"
-            className="w-full"
+            className="w-full cursor-pointer"
             disabled={loading}
             onClick={async () => {
               await signIn.email({
