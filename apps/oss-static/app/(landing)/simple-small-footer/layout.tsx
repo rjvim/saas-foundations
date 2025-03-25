@@ -47,7 +47,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         verticalNavigationMenu={verticalNavigationMenu}
       />
       {children}
-      <SimpleFooter navigation={footerNavigation} />
+      {/* <SimpleFooter navigation={footerNavigation} /> */}
     </div>
   );
 }

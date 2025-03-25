@@ -23,73 +23,16 @@ export type FooterNavigationProps = {
   companyDescription?: string;
 };
 
-// Default navigation items
-const defaultNavigation: FooterNavigationProps = {
-  solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Automation", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
-  ],
-  support: [
-    { name: "Submit ticket", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-  ],
-  company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-  ],
-  legal: [
-    { name: "Terms of service", href: "#" },
-    { name: "Privacy policy", href: "#" },
-    { name: "License", href: "#" },
-  ],
-  social: [
-    {
-      name: "Facebook",
-      href: "#",
-      icon: Icons.facebook,
-    },
-    {
-      name: "Instagram",
-      href: "#",
-      icon: Icons.instagram,
-    },
-    {
-      name: "X",
-      href: "#",
-      icon: Icons.x,
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: Icons.github,
-    },
-    {
-      name: "YouTube",
-      href: "#",
-      icon: Icons.youtube,
-    },
-  ],
-  companyName: "Your Company",
-  companyLogo: "https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600",
-  companyDescription: "Making the world a better place through constructing elegant hierarchies.",
-};
-
 export default function BigFooter({
-  solutions = defaultNavigation.solutions,
-  support = defaultNavigation.support,
-  company = defaultNavigation.company,
-  legal = defaultNavigation.legal,
-  social = defaultNavigation.social,
-  companyName = defaultNavigation.companyName,
-  companyLogo = defaultNavigation.companyLogo,
-  companyDescription = defaultNavigation.companyDescription,
-}: FooterNavigationProps = {}) {
+  solutions,
+  support,
+  company,
+  legal,
+  social,
+  companyName,
+  companyLogo,
+  companyDescription,
+}: FooterNavigationProps) {
   const navigation = {
     solutions,
     support,
@@ -104,11 +47,7 @@ export default function BigFooter({
         <GridBackground maxWidthClass="max-w-7xl" />
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <img
-              alt={companyName}
-              src={companyLogo}
-              className="h-9"
-            />
+            <img alt={companyName} src={companyLogo} className="h-9" />
             <p className="text-sm/6 text-balance text-gray-600">
               {companyDescription}
             </p>
@@ -200,7 +139,8 @@ export default function BigFooter({
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-sm/6 text-gray-600">
-            &copy; {new Date().getFullYear()} {companyName}, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} {companyName}, Inc. All rights
+            reserved.
           </p>
         </div>
       </div>
