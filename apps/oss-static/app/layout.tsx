@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import type { ReactNode } from "react";
+import { cn } from "@foundations/shadcn/lib/utils";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,13 +28,20 @@ export default function Layout({ children }: { children: ReactNode }) {
       <head>
         <script
           crossOrigin="anonymous"
-          src="//cdn.jsdelivr.net/npm/meta-scan@0.5.8/dist/auto.global.js"
+          src="//cdn.jsdelivr.net/npm/meta-scan@0.10.0/dist/auto.global.js"
           data-auto-enable={
             process.env.NODE_ENV === "development" ? "true" : "false"
           }
         />
       </head>
-      <body className="flex flex-col min-h-screen">{children}</body>
+      <body
+        className={cn(
+          "bg-background overscroll-none font-sans antialiased",
+          `${geistSans.variable} ${geistMono.variable}`
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

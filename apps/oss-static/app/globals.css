@@ -1,13 +1,21 @@
 @import "tailwindcss";
 
+@import "tw-animate-css";
+
+@import "@foundations/shadcn/globals.css";
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Import styles */
+
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
+/* Import Sources */
+
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
-@source '../../../packages/cms/content/**/*.mdx';
+@source '../../../workspace/ui/src/**/*.tsx';
