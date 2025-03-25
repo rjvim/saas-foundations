@@ -1,7 +1,30 @@
 import { GridBackground } from "@workspace/ui/grid-background";
 import { Icons } from "@workspace/ui/icons";
 
-const navigation = {
+export type FooterNavigationItem = {
+  name: string;
+  href: string;
+};
+
+export type FooterSocialItem = {
+  name: string;
+  href: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+};
+
+export type FooterNavigationProps = {
+  solutions?: FooterNavigationItem[];
+  support?: FooterNavigationItem[];
+  company?: FooterNavigationItem[];
+  legal?: FooterNavigationItem[];
+  social?: FooterSocialItem[];
+  companyName?: string;
+  companyLogo?: string;
+  companyDescription?: string;
+};
+
+// Default navigation items
+const defaultNavigation: FooterNavigationProps = {
   solutions: [
     { name: "Marketing", href: "#" },
     { name: "Analytics", href: "#" },
@@ -52,9 +75,29 @@ const navigation = {
       icon: Icons.youtube,
     },
   ],
+  companyName: "Your Company",
+  companyLogo: "https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600",
+  companyDescription: "Making the world a better place through constructing elegant hierarchies.",
 };
 
-export default function BigFooter() {
+export default function BigFooter({
+  solutions = defaultNavigation.solutions,
+  support = defaultNavigation.support,
+  company = defaultNavigation.company,
+  legal = defaultNavigation.legal,
+  social = defaultNavigation.social,
+  companyName = defaultNavigation.companyName,
+  companyLogo = defaultNavigation.companyLogo,
+  companyDescription = defaultNavigation.companyDescription,
+}: FooterNavigationProps = {}) {
+  const navigation = {
+    solutions,
+    support,
+    company,
+    legal,
+    social,
+  };
+
   return (
     <footer>
       <div className="relative isolate mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pt-24 lg:pt-32">
@@ -62,16 +105,15 @@ export default function BigFooter() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <img
-              alt="Company name"
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+              alt={companyName}
+              src={companyLogo}
               className="h-9"
             />
             <p className="text-sm/6 text-balance text-gray-600">
-              Making the world a better place through constructing elegant
-              hierarchies.
+              {companyDescription}
             </p>
             <div className="flex gap-x-6">
-              {navigation.social.map((item) => (
+              {navigation.social?.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -90,7 +132,7 @@ export default function BigFooter() {
                   Solutions
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
+                  {navigation.solutions?.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -107,7 +149,7 @@ export default function BigFooter() {
                   Support
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
+                  {navigation.support?.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -126,7 +168,7 @@ export default function BigFooter() {
                   Company
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
+                  {navigation.company?.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -141,7 +183,7 @@ export default function BigFooter() {
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm/6 font-semibold text-gray-900">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
+                  {navigation.legal?.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -158,7 +200,7 @@ export default function BigFooter() {
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-sm/6 text-gray-600">
-            &copy; 2024 Your Company, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} {companyName}, Inc. All rights reserved.
           </p>
         </div>
       </div>
