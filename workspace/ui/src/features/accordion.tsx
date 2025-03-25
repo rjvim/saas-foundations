@@ -59,7 +59,7 @@ const defaultFeatures: FeatureItem[] = [
   },
 ];
 
-const AccordionFeatures = ({ features = defaultFeatures }: Feature197Props) => {
+const AccordionFeatures = ({ features }: Feature197Props) => {
   const [activeTabId, setActiveTabId] = useState<number | null>(1);
   const [activeImage, setActiveImage] = useState(features[0].image);
 

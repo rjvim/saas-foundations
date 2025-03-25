@@ -88,10 +88,10 @@ export default function AnimatedHero() {
   return (
     <div className="relative flex w-full flex-col items-center overflow-x-hidden">
       <GridBackground maxWidthClass="max-w-7xl" />
-      <FloatingPaths position={-1} />
-      <FloatingPaths position={-2} />
 
       <div className="relative flex items-center justify-center w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 pt-32 border-t-1 border-gray-200">
+        <FloatingPaths position={-1} />
+        <FloatingPaths position={-2} />
         <div className="space-y-8">
           <Hero />
         </div>
