@@ -5,7 +5,7 @@ import { Icons } from "../icons";
 export interface FooterNavigationItem {
   name: string;
   href: string;
-  icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactNode;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 const defaultNavigation: FooterNavigationItem[] = [
@@ -36,10 +36,10 @@ const defaultNavigation: FooterNavigationItem[] = [
   },
 ];
 
-export default function SimpleFooter({ 
-  navigation = defaultNavigation 
-}: { 
-  navigation?: FooterNavigationItem[] 
+export default function SimpleFooter({
+  navigation = defaultNavigation,
+}: {
+  navigation?: FooterNavigationItem[];
 }) {
   return (
     <footer className="bg-white">

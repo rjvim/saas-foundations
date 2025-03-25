@@ -2,7 +2,9 @@ import type { ReactNode } from "react";
 import SimpleHeader from "@workspace/ui/headers/simple";
 import { SimpleNavigationMenu } from "@workspace/ui/navigation-menus/simple-horizontal";
 import { VerticalNavigationMenu } from "@workspace/ui/navigation-menus/simple-vertical";
-import SimpleFooter from "@workspace/ui/footers/simple";
+import SimpleFooter, {
+  type FooterNavigationItem,
+} from "@workspace/ui/footers/simple";
 import { Icons } from "@workspace/ui/icons";
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -19,51 +21,8 @@ export default function Layout({ children }: { children: ReactNode }) {
     <VerticalNavigationMenu items={navigationItems} loginHref="#" />
   );
 
-  // Footer navigation configuration
-  const footerNavigation = {
-    solutions: [
-      { name: "Marketing", href: "/marketing" },
-      { name: "Analytics", href: "/analytics" },
-      { name: "Automation", href: "/automation" },
-      { name: "Commerce", href: "/commerce" },
-    ],
-    support: [
-      { name: "Documentation", href: "/docs" },
-      { name: "Guides", href: "/guides" },
-      { name: "API Status", href: "/api-status" },
-    ],
-    company: [
-      { name: "About", href: "/about" },
-      { name: "Blog", href: "/blog" },
-      { name: "Careers", href: "/careers" },
-      { name: "Contact", href: "/contact" },
-    ],
-    legal: [
-      { name: "Privacy", href: "/privacy" },
-      { name: "Terms", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
-    ],
-    social: [
-      {
-        name: "Twitter",
-        href: "https://twitter.com/company",
-        icon: Icons.x,
-      },
-      {
-        name: "GitHub",
-        href: "https://github.com/company",
-        icon: Icons.github,
-      },
-      {
-        name: "YouTube",
-        href: "https://youtube.com/company",
-        icon: Icons.youtube,
-      },
-    ],
-  };
-
   // Social media icons for SimpleFooter
-  const socialIcons = [
+  const footerNavigation: FooterNavigationItem[] = [
     {
       name: "Twitter",
       href: "https://twitter.com/company",
@@ -88,7 +47,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         verticalNavigationMenu={verticalNavigationMenu}
       />
       {children}
-      <SimpleFooter navigation={socialIcons} />
+      <SimpleFooter navigation={footerNavigation} />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import { p } from "motion/react-client";
-
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {

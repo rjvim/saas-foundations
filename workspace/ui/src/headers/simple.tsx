@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { GridBackground } from "../grid-background";
 
-export default function StripeHeader({
+export default function SimpleHeader({
   navigationMenu,
   verticalNavigationMenu,
 }: {
