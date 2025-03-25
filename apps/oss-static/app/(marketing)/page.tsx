@@ -1,6 +1,9 @@
-import Link from "next/link";
-import RightImage from "@workspace/ui/heros/right-image";
+import AnimatedHero from "@workspace/ui/heros/animated-hero";
 
 export default function HomePage() {
-  return <RightImage />;
+  return (
+    <>
+      <AnimatedHero />
+    </>
+  );
 }

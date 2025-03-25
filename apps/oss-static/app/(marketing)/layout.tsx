@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import StripeHeader from "@workspace/ui/headers/stripe";
 import { SimpleNavigationMenu } from "@workspace/ui/navigation-menus/simple-horizontal";
 import { VerticalNavigationMenu } from "@workspace/ui/navigation-menus/simple-vertical";
+import BigFooter from "@workspace/ui/footers/big";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const navigationItems = [
@@ -24,6 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         verticalNavigationMenu={verticalNavigationMenu}
       />
       {children}
+      <BigFooter />
     </div>
   );
 }

@@ -16,7 +16,6 @@ export default function StripeHeader({
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-50 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <GridBackground maxWidthClass="" />
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8 @container"

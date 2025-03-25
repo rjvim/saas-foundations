@@ -7,6 +7,7 @@ const withMDX = createMDX({
 /** @type {import('next').NextConfig} */
 const config = {
   output: "export",
+  images: { unoptimized: true },
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,

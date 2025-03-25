@@ -36,7 +36,7 @@ export const GridBackground: FC<GridBackgroundProps> = ({
     <div className={`absolute inset-0 h-full w-full ${className}`}>
       <div className="relative h-full w-full overflow-hidden">
         <div
-          className="pointer-events-none absolute top-0 left-0 h-full w-full px-4"
+          className="pointer-events-none absolute top-0 left-0 h-full w-full"
           aria-hidden="true"
         >
           <div
