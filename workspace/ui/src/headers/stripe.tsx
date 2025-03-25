@@ -1,7 +1,6 @@
 "use client";
 
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { NavigationMenuDemo } from "@workspace/ui/navigation-menu";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const navigation = [
@@ -11,7 +10,13 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 
-export default function StripeHeader() {
+export default function StripeHeader({
+  navigationMenu,
+  verticalNavigationMenu,
+}: {
+  navigationMenu: React.ReactNode;
+  verticalNavigationMenu?: React.ReactNode;
+}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
@@ -29,9 +34,7 @@ export default function StripeHeader() {
                 className="h-8 w-auto"
               />
             </a>
-            <div className="hidden lg:flex lg:gap-x-12">
-              <NavigationMenuDemo />
-            </div>
+            <div className="hidden lg:flex lg:gap-x-12">{navigationMenu}</div>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -74,29 +77,31 @@ export default function StripeHeader() {
                 <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+            {verticalNavigationMenu || (
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                  <div className="py-6">
                     <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      href="#"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
-                      {item.name}
+                      Log in
                     </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </DialogPanel>
         </Dialog>
       </header>

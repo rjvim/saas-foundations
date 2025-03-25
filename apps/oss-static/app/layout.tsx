@@ -29,9 +29,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <script
           crossOrigin="anonymous"
           src="//cdn.jsdelivr.net/npm/meta-scan@0.10.0/dist/auto.global.js"
-          data-auto-enable={
-            process.env.NODE_ENV === "development" ? "true" : "false"
-          }
+          data-auto-enable={"false"}
         />
       </head>
       <body
