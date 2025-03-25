@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { client as authClient } from "@/lib/auth-client";
+import { Toaster } from "@foundations/shadcn/components/sonner";
 
 export function Providers({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -22,6 +23,7 @@ export function Providers({ children }: { children: ReactNode }) {
       LinkComponent={Link}
     >
       {children}
+      <Toaster />
     </AuthUIProvider>
   );
 }

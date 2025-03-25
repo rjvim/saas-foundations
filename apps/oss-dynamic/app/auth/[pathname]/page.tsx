@@ -1,5 +1,5 @@
-import { authViewPaths } from "@daveyplate/better-auth-ui/server";
 import { AuthView } from "@/app/auth/[pathname]/view";
+import { authViewPaths } from "@daveyplate/better-auth-ui/server";
 
 export function generateStaticParams() {
   return Object.values(authViewPaths).map((pathname) => ({ pathname }));
