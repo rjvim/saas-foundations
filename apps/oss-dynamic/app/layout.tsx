@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <head>
         <script
           crossOrigin="anonymous"
-          src="//cdn.jsdelivr.net/npm/meta-scan@0.5.8/dist/auto.global.js"
+          src="//cdn.jsdelivr.net/npm/meta-scan@0.10.0/dist/auto.global.js"
           data-auto-enable={
             process.env.NODE_ENV === "development" ? "true" : "false"
           }
@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           `${geistSans.variable} ${geistMono.variable}`
         )}
       >
-        <RootProvider>{children}</RootProvider>
+        {children}
       </body>
     </html>
   );
