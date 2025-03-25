@@ -3,12 +3,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+import { GridBackground } from "../grid-background";
 
 export default function StripeHeader({
   navigationMenu,
@@ -21,6 +16,7 @@ export default function StripeHeader({
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-50 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <GridBackground maxWidthClass="" />
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8 @container"
@@ -31,7 +27,7 @@ export default function StripeHeader({
               <img
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                className="h-8 w-8"
               />
             </a>
             <div className="hidden lg:flex lg:gap-x-12">{navigationMenu}</div>
@@ -77,31 +73,7 @@ export default function StripeHeader({
                 <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
             </div>
-            {verticalNavigationMenu || (
-              <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )}
+            {verticalNavigationMenu}
           </DialogPanel>
         </Dialog>
       </header>
