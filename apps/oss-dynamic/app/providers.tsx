@@ -7,23 +7,31 @@ import type { ReactNode } from "react";
 
 import { client as authClient } from "@/lib/auth-client";
 import { Toaster } from "@foundations/shadcn/components/sonner";
+import { ThemeProvider } from "next-themes";
 
 export function Providers({ children }: { children: ReactNode }) {
   const router = useRouter();
 
   return (
-    <AuthUIProvider
-      authClient={authClient}
-      navigate={router.push}
-      replace={router.replace}
-      onSessionChange={() => {
-        // Clear router cache (protected routes)
-        router.refresh();
-      }}
-      LinkComponent={Link}
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
     >
-      {children}
-      <Toaster />
-    </AuthUIProvider>
+      <AuthUIProvider
+        authClient={authClient}
+        navigate={router.push}
+        replace={router.replace}
+        onSessionChange={() => {
+          // Clear router cache (protected routes)
+          router.refresh();
+        }}
+        LinkComponent={Link}
+      >
+        {children}
+        <Toaster />
+      </AuthUIProvider>
+    </ThemeProvider>
   );
 }
