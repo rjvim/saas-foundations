@@ -4,9 +4,25 @@ import { baseOptions } from "../layout.config";
 import { source } from "@foundations/cms/source";
 import { RootProvider } from "fumadocs-ui/provider";
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({
+  isStatic = false,
+  children,
+}: {
+  isStatic?: boolean;
+  children: ReactNode;
+}) {
   return (
-    <RootProvider>
+    <RootProvider
+      {...(isStatic
+        ? {
+            search: {
+              options: {
+                type: "static",
+              },
+            },
+          }
+        : {})}
+    >
       <DocsLayout
         tree={source.pageTree}
         sidebar={{ prefetch: false, tabs: false }}

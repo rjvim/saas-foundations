@@ -1,3 +1,6 @@
 import Layout from "@foundations/cms/docs/layout";
+import type { ReactNode } from "react";
 
-export default Layout;
+export default function StaticLayout({ children }: { children: ReactNode }) {
+  return <Layout isStatic>{children}</Layout>;
+}

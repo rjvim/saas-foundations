@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { RootProvider } from "fumadocs-ui/provider";
 import type { ReactNode } from "react";
 
 const geistSans = localFont({
@@ -34,17 +33,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           }
         />
       </head>
-      <body className="flex flex-col min-h-screen">
-        <RootProvider
-          search={{
-            options: {
-              type: "static",
-            },
-          }}
-        >
-          {children}
-        </RootProvider>
-      </body>
+      <body className="flex flex-col min-h-screen">{children}</body>
     </html>
   );
 }
