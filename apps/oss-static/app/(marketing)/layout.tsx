@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import StripeHeader from "@workspace/ui/headers/stripe";
-import { SimpleNavigationMenu } from "@workspace/ui/simple-navigation-menu";
-import { VerticalNavigationMenu } from "@workspace/ui/vertical-navigation-menu";
+import { SimpleNavigationMenu } from "@workspace/ui/navigation-menus/simple-horizontal";
+import { VerticalNavigationMenu } from "@workspace/ui/navigation-menus/simple-vertical";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const navigationItems = [
