@@ -1,6 +1,4 @@
-"use client";
-
-import { Icons } from "../icons";
+import { GridBackground } from "../grid-background";
 
 export interface FooterNavigationItem {
   name: string;
@@ -8,42 +6,16 @@ export interface FooterNavigationItem {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-const defaultNavigation: FooterNavigationItem[] = [
-  {
-    name: "Facebook",
-    href: "#",
-    icon: Icons.facebook,
-  },
-  {
-    name: "Instagram",
-    href: "#",
-    icon: Icons.instagram,
-  },
-  {
-    name: "X",
-    href: "#",
-    icon: Icons.x,
-  },
-  {
-    name: "GitHub",
-    href: "#",
-    icon: Icons.github,
-  },
-  {
-    name: "YouTube",
-    href: "#",
-    icon: Icons.youtube,
-  },
-];
-
 export default function SimpleFooter({
-  navigation = defaultNavigation,
+  navigation,
 }: {
-  navigation?: FooterNavigationItem[];
+  navigation: FooterNavigationItem[];
 }) {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+    <footer>
+      <div className="relative isolate mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+        <GridBackground maxWidthClass="max-w-7xl" />
+
         <div className="flex justify-center gap-x-6 md:order-2">
           {navigation.map((item) => (
             <a
