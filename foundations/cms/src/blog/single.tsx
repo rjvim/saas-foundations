@@ -14,13 +14,13 @@ export default async function Page(props: {
   const Mdx = page.data.body;
 
   return (
-    <>
-      <div className="container rounded-xl border py-12 md:px-8">
+    <div className="max-w-7xl mx-auto">
+      <div className="container rounded-xl border py-12">
         <h1 className="mb-2 text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-4 text-fd-muted-foreground">{page.data.description}</p>
         <Link href="/blog">Back</Link>
       </div>
-      <article className="container flex flex-col px-4 py-8">
+      <article className="container flex flex-colpy-8">
         <div className="prose min-w-0">
           <InlineTOC items={page.data.toc} />
           <Mdx components={defaultMdxComponents} />
@@ -38,7 +38,7 @@ export default async function Page(props: {
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 }
 
