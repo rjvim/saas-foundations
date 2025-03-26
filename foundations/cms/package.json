@@ -20,6 +20,7 @@
     "postinstall": "fumadocs-mdx"
   },
   "devDependencies": {
+    "@foundations/shadcn": "workspace:*",
     "@turbo/gen": "^2.4.4",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.12",
@@ -35,6 +36,7 @@
     "fumadocs-core": "^15.1.2",
     "fumadocs-mdx": "^11.5.7",
     "fumadocs-ui": "^15.1.2",
+    "lucide-react": "^0.483.0",
     "next": "^15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
