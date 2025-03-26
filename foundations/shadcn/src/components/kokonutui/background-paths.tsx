@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@foundations/shadcn/components/button";
+import { cn } from "@foundations/shadcn/lib/utils";
 
 export function FloatingPaths({
   position,
@@ -24,9 +24,9 @@ export function FloatingPaths({
   }));
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute inset-0 pointer-events-none -z-50">
       <svg
-        className={`w-full h-full ${color}`}
+        className={cn("w-full h-full", color)}
         viewBox="0 0 696 316"
         fill="none"
       >
