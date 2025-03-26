@@ -1,14 +1,39 @@
 import Link from "next/link";
-import { blog } from "@foundations/cms/source";
+import { blogSource, getSortedByDatePosts } from "@foundations/cms/source";
 import { Card } from "@foundations/shadcn/components/card";
 import { ArrowRight } from "lucide-react";
 import { GridBackground } from "@workspace/ui/grid-background";
 
+const Pagination = ({ pageIndex }: { pageIndex: number }) => {
+  const handlePageChange = async (page: number) => {
+    "use server";
+    redirect(`/posts?page=${page}`);
+  };
+
+  return (
+    <div className="border-grid border-t">
+      <div className="container-wrapper bg-dashed">
+        <NumberedPagination
+          currentPage={pageIndex + 1}
+          totalPages={pageCount}
+          paginationItemsToDisplay={5}
+          onPageChange={handlePageChange}
+        />
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
-  const posts = blog.getPages();
+  // const posts = blogSource.getPages();
   const heading = "Blog Posts";
   const description =
     "Discover the latest insights and tutorials about modern web development, UI design, and component-driven architecture.";
+
+  const pageIndex = 0;
+  const startIndex = pageIndex * 5;
+  const endIndex = startIndex + 5;
+  const posts = getSortedByDatePosts().slice(startIndex, endIndex);
 
   return (
     <section className="relative flex w-full flex-col items-center overflow-x-hidden">

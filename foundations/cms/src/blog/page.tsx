@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
-import { blog } from "@foundations/cms/source";
+import { blogSource } from "@foundations/cms/source";
 import {
   DocsPage,
   DocsBody,
@@ -12,7 +12,7 @@ export default async function Page(props: {
   params: Promise<{ slug: string }>;
 }) {
   const params = await props.params;
-  const page = blog.getPage([params.slug]);
+  const page = blogSource.getPage([params.slug]);
 
   if (!page) notFound();
   const MDX = page.data.body;
@@ -41,7 +41,7 @@ export default async function Page(props: {
 }
 
 export function generateStaticParams(): { slug: string }[] {
-  return blog.getPages().map((page) => ({
+  return blogSource.getPages().map((page) => ({
     slug: page.slugs[0] || "",
   }));
 }
@@ -50,7 +50,7 @@ export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }) {
   const params = await props.params;
-  const page = blog.getPage([params.slug]);
+  const page = blogSource.getPage([params.slug]);
 
   if (!page) notFound();
 

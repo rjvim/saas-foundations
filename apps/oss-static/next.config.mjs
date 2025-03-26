@@ -15,6 +15,12 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  serverExternalPackages: [
+    "ts-morph",
+    "typescript",
+    "oxc-transform",
+    "twoslash",
+  ],
 };
 
 export default withMDX(config);

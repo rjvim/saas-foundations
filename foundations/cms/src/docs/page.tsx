@@ -1,4 +1,4 @@
-import { source } from "@foundations/cms/source";
+import { docsSource } from "@foundations/cms/source";
 import {
   DocsPage,
   DocsBody,
@@ -12,7 +12,7 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const page = docsSource.getPage(params.slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
@@ -38,14 +38,14 @@ export default async function Page(props: {
 }
 
 export async function generateStaticParams() {
-  return source.generateParams();
+  return docsSource.generateParams();
 }
 
 export async function generateMetadata(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const page = docsSource.getPage(params.slug);
   if (!page) notFound();
 
   return {

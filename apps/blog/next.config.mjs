@@ -1,4 +1,4 @@
-import { createMDX } from 'fumadocs-mdx/next';
+import { createMDX } from "fumadocs-mdx/next";
 
 const withMDX = createMDX();
 
@@ -9,10 +9,10 @@ const config = {
     viewTransition: true,
   },
   serverExternalPackages: [
-    'ts-morph',
-    'typescript',
-    'oxc-transform',
-    'twoslash',
+    "ts-morph",
+    "typescript",
+    "oxc-transform",
+    "twoslash",
   ],
 };
 
