@@ -1,0 +1,69 @@
+---
+title: The Evolution of Jamstack
+description: How Jamstack architecture has transformed from static sites to dynamic web applications
+author: devon
+date: 2025-03-10
+tags: [jamstack, web development, frontend, static sites]
+image: https://shadcnblocks.com/images/block/placeholder-4.svg
+readingTime: 3 minutes
+category: Web Development
+featured: true
+lastModified: 2025-03-20
+status: published
+---
+
+# The Evolution of Jamstack
+
+Jamstack architecture has transformed web development by emphasizing pre-rendering, decoupling, and the use of modern build tools. What began as an approach for simple static sites has evolved into a comprehensive strategy for building dynamic web applications.
+
+## The Original Vision
+
+The term "Jamstack" was coined to represent a specific architectural approach:
+
+### JavaScript, APIs, and Markup
+
+The original formula was straightforward:
+
+- **J**: JavaScript for client-side interactivity
+- **A**: APIs to handle dynamic functionality
+- **M**: Markup pre-rendered at build time
+
+## Modern Jamstack
+
+Today's Jamstack has evolved significantly:
+
+### Hybrid Rendering
+
+Contemporary Jamstack sites employ multiple rendering strategies:
+
+1. Static generation for marketing pages
+2. Server-side rendering for personalized content
+3. Client-side rendering for highly interactive elements
+
+### Islands Architecture
+
+The islands architecture pattern optimizes for both performance and dynamism:
+
+```jsx
+// Example component using islands architecture
+export default function ProductPage({ product }) {
+  return (
+    <div>
+      <StaticHeader />
+      <StaticProductDetails product={product} />
+
+      {/* Interactive island */}
+      <ClientComponent>
+        <DynamicPricingCalculator productId={product.id} />
+      </ClientComponent>
+
+      <StaticFooter />
+    </div>
+  );
+}
+```
+
+<Cards>
+  <Card title="Static Site Generators" href="/docs/ssg" />
+  <Card title="Islands Architecture" href="/docs/islands" />
+</Cards>

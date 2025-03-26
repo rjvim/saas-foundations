@@ -1,0 +1,71 @@
+---
+title: Zero Trust Security
+description: Why modern security architectures assume breach and verify everything
+author: lina
+date: 2025-03-22
+tags: [security, zero trust, cybersecurity, enterprise]
+image: https://shadcnblocks.com/images/block/placeholder-5.svg
+readingTime: 6 minutes
+category: Security
+featured: false
+estimatedTime: 10 minutes
+level: Intermediate
+translation: { es: "seguridad-confianza-cero" }
+---
+
+# Zero Trust Security
+
+Traditional security models operated on the principle of "trust but verify" and focused on perimeter defense. Zero Trust flips this paradigm with a simple principle: never trust, always verify.
+
+## Core Principles
+
+Zero Trust is built on several foundational ideas:
+
+### Assume Breach
+
+Zero Trust architectures operate under the assumption that attackers are already present within the network.
+
+### Verify Explicitly
+
+Every access request must be fully authenticated, authorized, and encrypted:
+
+1. Strong identity verification for all users
+2. Device health validation
+3. Just-in-time and just-enough access
+4. Context-aware policies
+
+## Implementation Strategies
+
+Moving to Zero Trust requires systematic changes:
+
+### Identity as the Control Plane
+
+Modern security centers on identity rather than network location:
+
+```yaml
+# Example access policy
+resources:
+  - id: financial-dashboard
+    access_rules:
+      - condition:
+          user:
+            groups: ["finance-team"]
+            authentication:
+              mfa: required
+          device:
+            compliance: verified
+            encryption: enabled
+          context:
+            location: approved
+            risk_score: low
+        permission: allow
+```
+
+### Micro-Segmentation
+
+Network security shifts from perimeter-based to fine-grained segmentation between workloads.
+
+<Cards>
+  <Card title="Zero Trust Reference Architecture" href="/docs/zero-trust" />
+  <Card title="Identity Management" href="/docs/identity" />
+</Cards>

@@ -1,0 +1,54 @@
+---
+title: Microservices Trade-offs
+description: Understanding when microservices make sense and when they create unnecessary complexity
+author: maria
+date: 2025-03-15
+tags: [microservices, architecture, distributed systems, complexity]
+image: https://shadcnblocks.com/images/block/placeholder-1.svg
+readingTime: 4 minutes
+category: Architecture
+featured: true
+---
+
+# Microservices Trade-offs
+
+Microservices architecture has become the default choice for many organizations building cloud-native applications. However, this architectural style comes with significant trade-offs that teams should carefully consider before adoption.
+
+## The Promise of Microservices
+
+Microservices offer several compelling benefits:
+
+### Independent Deployment
+
+Teams can release services independently, accelerating delivery cycles and reducing coordination overhead.
+
+### Technology Diversity
+
+Different services can use different languages and frameworks, allowing teams to select the best tool for each specific domain.
+
+## Hidden Costs
+
+Despite these advantages, microservices introduce substantial complexity:
+
+### Distributed Systems Challenges
+
+Microservices turn previously simple function calls into network requests, bringing all the challenges of distributed systems:
+
+- Network latency
+- Partial failures
+- Eventual consistency
+- Debugging complexity
+
+### Operational Overhead
+
+The operational burden grows significantly with microservices:
+
+1. Complex deployment pipelines
+2. Service discovery mechanisms
+3. Monitoring and observability tools
+4. Distributed tracing
+
+<Cards>
+  <Card title="When to Choose Monoliths" href="/docs/monoliths" />
+  <Card title="Microservices Patterns" href="/docs/microservices-patterns" />
+</Cards>

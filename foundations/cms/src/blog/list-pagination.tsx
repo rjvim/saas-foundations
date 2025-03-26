@@ -5,12 +5,27 @@ import { Button } from "@foundations/shadcn/components/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { GridBackground } from "@workspace/ui/grid-background";
 
-export default function List() {
+export const dynamic = "force-static";
+
+type Props = {
+  params: { page: string };
+};
+
+export function generateStaticParams() {
+  const allPosts = getSortedByDatePosts();
+  const totalPages = Math.ceil(allPosts.length / 5);
+
+  return Array.from({ length: totalPages }, (_, i) => ({
+    page: (i + 1).toString(),
+  }));
+}
+
+export default function ListWithPagination({ params }: Props) {
   const heading = "Blog Posts";
   const description =
     "Discover the latest insights and tutorials about modern web development, UI design, and component-driven architecture.";
 
-  const page = 1;
+  const page = Number(params.page);
   const pageIndex = page - 1;
   const pageSize = 5;
   const allPosts = getSortedByDatePosts();

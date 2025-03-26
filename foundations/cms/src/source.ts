@@ -20,7 +20,7 @@ export type Post = ReturnType<typeof getBlogPost>;
 const posts = getBlogPosts();
 
 export const getSortedByDatePosts = () =>
-  posts.toSorted((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  [...posts].sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 export const getTags = () => {
   const tagSet = new Set<string>();
@@ -33,11 +33,11 @@ export const getTags = () => {
     }
   }
 
-  return Array.from(tagSet).toSorted();
+  return Array.from(tagSet).sort();
 };
 
-// export const getPostsByTag = (tag: string) => {
-//   return posts
-//     .filter((post) => post.data.tags?.includes(tag))
-//     .toSorted((a, b) => b.data.date.getTime() - a.data.date.getTime());
-// };
+export const getPostsByTag = (tag: string) => {
+  return [...posts]
+    .filter((post) => post.data.tags?.includes(tag))
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+};
