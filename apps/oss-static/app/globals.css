@@ -19,6 +19,7 @@
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
 @source '../../../workspace/ui/src/**/*.tsx';
+@source '../../../foundations/cms/src/**/*.tsx';
 
 #nd-nav {
   @apply max-w-7xl;
