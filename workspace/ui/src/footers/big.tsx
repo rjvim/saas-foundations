@@ -19,7 +19,6 @@ export type FooterNavigationProps = {
   legal?: FooterNavigationItem[];
   social?: FooterSocialItem[];
   companyName?: string;
-  companyLogo?: string;
   companyDescription?: string;
 };
 
@@ -30,7 +29,6 @@ export default function BigFooter({
   legal,
   social,
   companyName,
-  companyLogo,
   companyDescription,
 }: FooterNavigationProps) {
   const navigation = {
@@ -47,7 +45,7 @@ export default function BigFooter({
         <GridBackground maxWidthClass="max-w-7xl" />
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <img alt={companyName} src={companyLogo} className="h-9" />
+            <Icons.logo className="h-8 w-8" />
             <p className="text-sm/6 text-balance text-gray-600">
               {companyDescription}
             </p>

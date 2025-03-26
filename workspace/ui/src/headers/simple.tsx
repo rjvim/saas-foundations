@@ -4,6 +4,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { GridBackground } from "../grid-background";
+import { Icons } from "@workspace/ui/icons";
 
 export default function SimpleHeader({
   navigationMenu,
@@ -23,11 +24,7 @@ export default function SimpleHeader({
           <div className="flex items-center gap-x-12">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-8"
-              />
+              <Icons.logo className="h-8 w-8" />
             </a>
             <div className="hidden lg:flex lg:gap-x-12">{navigationMenu}</div>
           </div>
