@@ -17,6 +17,9 @@
     "oss-static:dev": "turbo run dev --filter=oss-static",
     "oss-static:build": "turbo run build --filter=oss-static",
     "oss-static:start": "turbo run start --filter=oss-static",
+    "blog:dev": "turbo run dev --filter=blog",
+    "blog:build": "turbo run build --filter=blog",
+    "blog:start": "turbo run start --filter=blog",
     "update-common-packages": "pnpm update fumadocs-core fumadocs-mdx fumadocs-ui next tailwindcss tw-animate-css react react-dom lucide-react better-auth @tailwindcss/postcss @types/mdx postcss kysely @types/react @types/react-dom zod tailwind-merge --recursive --latest"
   },
   "devDependencies": {
@@ -24,7 +27,7 @@
     "turbo": "^2.4.4",
     "typescript": "5.8.2"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.5.2",
   "engines": {
     "node": ">=18"
   }
