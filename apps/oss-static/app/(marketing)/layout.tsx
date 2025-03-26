@@ -1,83 +1,67 @@
 import type { ReactNode } from "react";
-import SimpleHeader from "@workspace/ui/headers/simple";
-import { SimpleNavigationMenu } from "@workspace/ui/navigation-menus/simple-horizontal";
-import { VerticalNavigationMenu } from "@workspace/ui/navigation-menus/simple-vertical";
-import BigFooter from "@workspace/ui/footers/big";
+import { HomeLayout } from "fumadocs-ui/layouts/home";
+import SimpleFooter from "@workspace/ui/footers/simple";
 import { Icons } from "@workspace/ui/icons";
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+
+const baseOptions: BaseLayoutProps = {
+  githubUrl: "https://github.com/rjvim/saas-foundations",
+  nav: {
+    title: (
+      <>
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="Logo"
+        >
+          <circle cx={12} cy={12} r={12} fill="currentColor" />
+        </svg>
+        SaaS Foundations
+      </>
+    ),
+  },
+  links: [
+    {
+      text: "Documentation",
+      url: "/docs",
+      active: "nested-url",
+    },
+    {
+      text: "Blog",
+      url: "/blog",
+    },
+    {
+      text: "About",
+      url: "/about",
+      active: "nested-url",
+    },
+  ],
+};
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const navigationItems = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" },
+  const footerNavigation = [
+    {
+      name: "Twitter",
+      href: "https://twitter.com/company",
+      icon: Icons.x,
+    },
+    {
+      name: "GitHub",
+      href: "https://github.com/company",
+      icon: Icons.github,
+    },
+    {
+      name: "YouTube",
+      href: "https://youtube.com/company",
+      icon: Icons.youtube,
+    },
   ];
 
-  const navigationMenu = <SimpleNavigationMenu items={navigationItems} />;
-
-  const verticalNavigationMenu = (
-    <VerticalNavigationMenu items={navigationItems} loginHref="#" />
-  );
-
-  // Footer navigation configuration
-  const footerNavigation = {
-    solutions: [
-      { name: "Marketing", href: "/marketing" },
-      { name: "Analytics", href: "/analytics" },
-      { name: "Automation", href: "/automation" },
-      { name: "Commerce", href: "/commerce" },
-    ],
-    support: [
-      { name: "Documentation", href: "/docs" },
-      { name: "Guides", href: "/guides" },
-      { name: "API Status", href: "/api-status" },
-    ],
-    company: [
-      { name: "About", href: "/about" },
-      { name: "Blog", href: "/blog" },
-      { name: "Careers", href: "/careers" },
-      { name: "Contact", href: "/contact" },
-    ],
-    legal: [
-      { name: "Privacy", href: "/privacy" },
-      { name: "Terms", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
-    ],
-    social: [
-      {
-        name: "Twitter",
-        href: "https://twitter.com/company",
-        icon: Icons.x,
-      },
-      {
-        name: "GitHub",
-        href: "https://github.com/company",
-        icon: Icons.github,
-      },
-      {
-        name: "YouTube",
-        href: "https://youtube.com/company",
-        icon: Icons.youtube,
-      },
-    ],
-  };
-
   return (
-    <div className="flex flex-col min-h-screen">
-      <SimpleHeader
-        navigationMenu={navigationMenu}
-        verticalNavigationMenu={verticalNavigationMenu}
-      />
+    <HomeLayout {...baseOptions}>
       {children}
-      <BigFooter
-        solutions={footerNavigation.solutions}
-        support={footerNavigation.support}
-        company={footerNavigation.company}
-        legal={footerNavigation.legal}
-        social={footerNavigation.social}
-        companyName="SaaS Foundations"
-        companyDescription="Building the foundation for your next SaaS product."
-      />
-    </div>
+      <SimpleFooter navigation={footerNavigation} />
+    </HomeLayout>
   );
 }

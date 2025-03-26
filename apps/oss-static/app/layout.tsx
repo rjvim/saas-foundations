@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import type { ReactNode } from "react";
 import { cn } from "@foundations/shadcn/lib/utils";
+import { RootProvider } from "fumadocs-ui/provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,11 +27,11 @@ export default function Layout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <head>
-        <script
+        {/* <script
           crossOrigin="anonymous"
           src="//cdn.jsdelivr.net/npm/meta-scan@0.10.0/dist/auto.global.js"
           data-auto-enable={"false"}
-        />
+        /> */}
       </head>
       <body
         className={cn(
@@ -38,7 +39,15 @@ export default function Layout({ children }: { children: ReactNode }) {
           `${geistSans.variable} ${geistMono.variable}`
         )}
       >
-        {children}
+        <RootProvider
+          search={{
+            options: {
+              type: "static",
+            },
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
