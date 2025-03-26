@@ -3,7 +3,6 @@ import { HomeLayout } from "fumadocs-ui/layouts/home";
 import SimpleFooter from "@workspace/ui/footers/simple";
 import { Icons } from "@workspace/ui/icons";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
-import { GridBackground } from "@workspace/ui/grid-background";
 
 const baseOptions: BaseLayoutProps = {
   githubUrl: "https://github.com/rjvim/saas-foundations",

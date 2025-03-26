@@ -10,8 +10,9 @@
     "./search-static": "./src/search-static.ts",
     "./docs/page": "./src/docs/page.tsx",
     "./docs/layout": "./src/docs/layout.tsx",
+    "./blog/layout": "./src/blog/layout.tsx",
     "./blog/list": "./src/blog/list.tsx",
-    "./blog/single": "./src/blog/single.tsx"
+    "./blog/page": "./src/blog/page.tsx"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
