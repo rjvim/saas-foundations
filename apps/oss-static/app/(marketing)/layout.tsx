@@ -3,6 +3,7 @@ import { HomeLayout } from "fumadocs-ui/layouts/home";
 import SimpleFooter from "@workspace/ui/footers/simple";
 import { Icons } from "@workspace/ui/icons";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { GridBackground } from "@workspace/ui/grid-background";
 
 const baseOptions: BaseLayoutProps = {
   githubUrl: "https://github.com/rjvim/saas-foundations",
@@ -62,6 +63,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <HomeLayout {...baseOptions}>
       {children}
       <SimpleFooter navigation={footerNavigation} />
+      {/* <GridBackground maxWidthClass="max-w-7xl" /> */}
     </HomeLayout>
   );
 }

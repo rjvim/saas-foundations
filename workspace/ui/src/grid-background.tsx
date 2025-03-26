@@ -33,7 +33,9 @@ export const GridBackground: FC<GridBackgroundProps> = ({
   ));
 
   return (
-    <div className={`absolute -z-50 inset-0 h-full w-full ${className}`}>
+    <div
+      className={`stripe-grid absolute -z-50 inset-0 h-full w-full ${className}`}
+    >
       <div className="relative h-full w-full overflow-hidden">
         <div
           className="pointer-events-none absolute top-0 left-0 h-full w-full"

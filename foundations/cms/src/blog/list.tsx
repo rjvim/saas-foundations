@@ -4,6 +4,8 @@ import { blog } from "@foundations/cms/source";
 export default function Home() {
   const posts = blog.getPages();
 
+  // https://21st.dev/shadcnblockscom/blog8/default
+
   return (
     <main className="grow container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8">Latest Blog Posts</h1>

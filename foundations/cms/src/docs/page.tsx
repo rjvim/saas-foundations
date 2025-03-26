@@ -24,6 +24,9 @@ export default async function Page(props: {
       footer={{
         enabled: false,
       }}
+      tableOfContent={{
+        style: "clerk",
+      }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
