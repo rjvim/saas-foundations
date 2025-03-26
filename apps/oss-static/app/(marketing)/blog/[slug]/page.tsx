@@ -1,15 +1,12 @@
 import { notFound } from "next/navigation";
-import { Toc } from "fumadocs-ui/components/layout/toc";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { blog } from "@foundations/cms/source";
-import ClerkTOCItems from "fumadocs-ui/components/layout/toc-clerk";
 import {
   DocsPage,
   DocsBody,
   DocsDescription,
   DocsTitle,
 } from "fumadocs-ui/page";
-import { GridBackground } from "@workspace/ui/grid-background";
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
@@ -33,9 +30,6 @@ export default async function Page(props: {
       article={{
         className: "!max-w-[1120px]",
       }}
-      // container={{
-      //   className: "relative bg-background",
-      // }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>

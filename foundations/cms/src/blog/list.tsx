@@ -7,7 +7,7 @@ export default function Home() {
   // https://21st.dev/shadcnblockscom/blog8/default
 
   return (
-    <main className="grow container mx-auto px-4 py-8">
+    <main className="grow mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 min-h-screen">
       <h1 className="text-4xl font-bold mb-8">Latest Blog Posts</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
