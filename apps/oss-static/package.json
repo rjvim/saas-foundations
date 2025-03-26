@@ -14,8 +14,9 @@
   "dependencies": {
     "@foundations/cms": "workspace:*",
     "@foundations/shadcn": "workspace:*",
+    "@shikijs/transformers": "^3.2.1",
     "@standard-schema/spec": "^1.0.0",
-    "@tailwindcss/postcss": "^4.0.15",
+    "@tailwindcss/postcss": "^4.0.17",
     "@types/mdx": "^2.0.13",
     "@workspace/ui": "workspace:*",
     "fumadocs-core": "^15.1.2",
@@ -26,13 +27,12 @@
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.15",
-    "tw-animate-css": "^1.2.4",
-    "zod": "^3.24.2",
     "rehype-katex": "7.0.1",
     "remark-math": "6.0.0",
     "shiki": "^3.2.1",
-    "@shikijs/transformers": "^3.2.1"
+    "tailwindcss": "^4.0.17",
+    "tw-animate-css": "^1.2.4",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.9",
