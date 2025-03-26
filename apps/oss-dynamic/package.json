@@ -41,7 +41,6 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@foundations/better-auth-ui": "workspace:*",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.12",
     "@types/react-dom": "19.0.4",
