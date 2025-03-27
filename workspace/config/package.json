@@ -4,10 +4,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": [
-      "./src/*.tsx",
-      "./src/*.ts"
-    ]
+    "./layout.config": "./src/layout.config.tsx",
+    "./metadata": "./src/metadata.ts"
   },
   "scripts": {
     "clean": "rm -rf node_modules",

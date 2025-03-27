@@ -1,5 +1,9 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
+export const title = "SaaS Foundations";
+export const description = "NextJS Template to build SaaS applications";
+export const owner = "Rajiv I'm";
+
 export const baseOptions: BaseLayoutProps = {
   githubUrl: "https://github.com/rjvim/saas-foundations",
   nav: {
@@ -13,8 +17,10 @@ export const baseOptions: BaseLayoutProps = {
         >
           <circle cx={12} cy={12} r={12} fill="currentColor" />
         </svg>
-        SaaS Foundations
+        {title}
       </>
     ),
   },
 };
+
+export const postsPerPage = 5;
