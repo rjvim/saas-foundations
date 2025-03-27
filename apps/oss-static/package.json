@@ -9,7 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "sitemap": "next-sitemap --config next-sitemap.config.cjs",
+    "postbuild": "pnpm sitemap"
   },
   "dependencies": {
     "@foundations/cms": "workspace:*",
