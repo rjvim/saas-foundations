@@ -7,7 +7,6 @@ export function createMetadata(override: Metadata): Metadata {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       url: "https://saas-foundations-oss-static.vercel.app",
-      images: "/banner.png",
       siteName: "OSS",
       ...override.openGraph,
     },
@@ -16,7 +15,6 @@ export function createMetadata(override: Metadata): Metadata {
       creator: "@rjv_im",
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      images: "/banner.png",
       ...override.twitter,
     },
     alternates: {
@@ -33,4 +31,4 @@ export const baseUrl =
   process.env.NODE_ENV === "development" ||
   !process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? new URL("http://localhost:3001")
-    : new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+    : new URL(`${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);

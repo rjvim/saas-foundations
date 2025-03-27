@@ -1,6 +1,8 @@
 import { docsSource, blogSource } from "@foundations/cms/source";
 import { createSearchAPI } from "fumadocs-core/search/server";
 
+export const revalidate = false;
+
 export const { staticGET: GET } = createSearchAPI("advanced", {
   indexes: [
     ...docsSource.getPages().map((page) => {
