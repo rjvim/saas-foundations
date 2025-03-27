@@ -13,7 +13,8 @@
     "./blog/layout": "./src/blog/layout.tsx",
     "./blog/list": "./src/blog/list.tsx",
     "./blog/list-pagination": "./src/blog/list-pagination.tsx",
-    "./blog/page": "./src/blog/page.tsx"
+    "./blog/page": "./src/blog/page.tsx",
+    "./mdx-layout": "./src/mdx-layout.tsx"
   },
   "scripts": {
     "clean": "rm -rf node_modules",
