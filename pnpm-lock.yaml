@@ -511,18 +511,6 @@ importers:
 
   workspace/config:
     dependencies:
-      '@foundations/shadcn':
-        specifier: workspace:*
-        version: link:../../foundations/shadcn
-      '@headlessui/react':
-        specifier: ^2.2.0
-        version: 2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@heroicons/react':
-        specifier: ^2.2.0
-        version: 2.2.0(react@19.0.0)
-      framer-motion:
-        specifier: ^12.5.0
-        version: 12.5.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       fumadocs-core:
         specifier: ^15.1.2
         version: 15.1.2(@types/react@19.0.12)(next@15.2.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)

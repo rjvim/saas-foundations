@@ -8,6 +8,7 @@ import {
   DocsTitle,
 } from "fumadocs-ui/page";
 import { blogsMetaImage } from "@foundations/cms/metadata-image";
+import { createMetadata } from "@workspace/config/metadata";
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
@@ -60,8 +61,16 @@ export async function generateMetadata(props: {
 
   if (!page) notFound();
 
-  return blogsMetaImage.withImage(page.slugs, {
-    title: page.data.title,
-    description: page.data.description,
-  });
+  return createMetadata(
+    blogsMetaImage.withImage(page.slugs, {
+      title: page.data.title,
+      description: page.data.description,
+      openGraph: {
+        url: page.url,
+      },
+      alternates: {
+        canonical: page.url,
+      },
+    })
+  );
 }

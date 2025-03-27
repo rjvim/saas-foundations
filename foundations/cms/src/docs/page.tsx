@@ -8,6 +8,7 @@ import {
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { docsMetaImage } from "@foundations/cms/metadata-image";
+import { createMetadata } from "@workspace/config/metadata";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -49,21 +50,16 @@ export async function generateMetadata(props: {
   const page = docsSource.getPage(params.slug);
   if (!page) notFound();
 
-  return docsMetaImage.withImage(page.slugs, {
-    title: page.data.title,
-    description: page.data.description,
-  });
-
-  // return createMetadata(
-  //   docsMetaImage.withImage(page.slugs, {
-  //     title,
-  //     description,
-  //     openGraph: {
-  //       url: page.url,
-  //     },
-  //     alternates: {
-  //       canonical: page.url,
-  //     },
-  //   })
-  // );
+  return createMetadata(
+    docsMetaImage.withImage(page.slugs, {
+      title: page.data.title,
+      description: page.data.description,
+      openGraph: {
+        url: page.url,
+      },
+      alternates: {
+        canonical: page.url,
+      },
+    })
+  );
 }
