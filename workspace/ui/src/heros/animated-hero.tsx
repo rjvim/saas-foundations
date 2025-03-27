@@ -6,6 +6,7 @@ import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@foundations/shadcn/components/button";
 import { FloatingPaths } from "@foundations/shadcn/components/kokonutui/background-paths";
 import { GridBackground } from "../grid-background";
+import Link from "next/link";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -30,9 +31,15 @@ function Hero() {
       <div className="container mx-auto">
         <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
           <div>
-            <Button variant="secondary" size="sm" className="gap-4">
-              Read our launch article <MoveRight className="w-4 h-4" />
-            </Button>
+            <Link href="https://x.com/rjv_im" target="_blank">
+              <Button
+                variant="secondary"
+                size="sm"
+                className="gap-4 cursor-pointer"
+              >
+                Follow along on X <MoveRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
