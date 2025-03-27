@@ -13,5 +13,5 @@ export const revalidate = false; // Revalidate every hour (or your preferred int
 
 // Image generation
 export default async function Image() {
-  return generateOGImage("SaaS Foundations");
+  return generateOGImage("About");
 }
