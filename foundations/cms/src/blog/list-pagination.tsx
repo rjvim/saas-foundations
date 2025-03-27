@@ -4,7 +4,7 @@ import { BlogList } from "./components/blog-list";
 export const dynamic = "force-static";
 
 type Props = {
-  params: { page: string };
+  params: Promise<{ page: string }>;
 };
 
 export function generateStaticParams() {
@@ -16,7 +16,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ListWithPagination({ params }: Props) {
-  const page = Number(params.page);
+export default async function ListWithPagination({ params }: Props) {
+  const page = Number((await params).page);
   return <BlogList page={page} />;
 }

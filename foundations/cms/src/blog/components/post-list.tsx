@@ -96,10 +96,10 @@ export function PostList({
           ))}
         </div>
 
-        <Pagination 
-          currentPage={currentPage} 
-          totalPages={totalPages} 
-          basePath={basePath} 
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          basePath={basePath}
         />
       </div>
     </section>
