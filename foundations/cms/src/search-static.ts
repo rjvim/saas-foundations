@@ -4,7 +4,6 @@ import { createSearchAPI } from "fumadocs-core/search/server";
 export const { staticGET: GET } = createSearchAPI("advanced", {
   indexes: [
     ...docsSource.getPages().map((page) => {
-      console.log("Docs Page URL:", page.url);
       return {
         title: page.data.title,
         description: page.data.description,

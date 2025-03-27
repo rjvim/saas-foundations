@@ -6,6 +6,7 @@
   "exports": {
     "./globals.css": "./src/styles/globals.css",
     "./source": "./src/source.ts",
+    "./metadata-image": "./src/metadata-image.ts",
     "./search-dynamic": "./src/search-dynamic.ts",
     "./search-static": "./src/search-static.ts",
     "./docs/page": "./src/docs/page.tsx",

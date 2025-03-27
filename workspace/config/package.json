@@ -28,6 +28,7 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.5.0",
+    "fumadocs-core": "^15.1.2",
     "fumadocs-ui": "^15.1.2",
     "glsl-canvas-js": "^0.2.9",
     "lucide-react": "^0.484.0",

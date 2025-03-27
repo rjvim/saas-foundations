@@ -7,6 +7,7 @@ import {
   DocsDescription,
   DocsTitle,
 } from "fumadocs-ui/page";
+import { blogsMetaImage } from "@foundations/cms/metadata-image";
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
@@ -59,8 +60,8 @@ export async function generateMetadata(props: {
 
   if (!page) notFound();
 
-  return {
+  return blogsMetaImage.withImage(page.slugs, {
     title: page.data.title,
     description: page.data.description,
-  };
+  });
 }
