@@ -3,51 +3,73 @@ import { Button } from "@workspace/ui/button";
 
 <MdxLayout title="About" toc={toc}>
 
-Hey, I'm a **Senior Software Engineer** at Company. I focus on building fast, accessible, and visually polished front-end experiences using tools like **Next.js**, **TypeScript**, and whatever cool thing just dropped on GitHub.
+# SaaS Foundations for Open Source Projects
 
-This portfolio is built with **Next.js** and powered by [Fumadocs](https://fumadocs.vercel.app/), which makes writing pages in Markdown feel like second nature. It lets me focus on content without wrestling with layout.
+A framework for building open source SaaS applications with focus on performance and user engagement.
 
-## Journey
+## Core Features
 
-I didn't grow up writing code. In fact, I didn't even know what a `<div>` was until much later. My curiosity started with tweaking themes on forums, editing little bits of CSS without knowing what CSS even meant.
+### Completely Static Architecture
 
-Eventually, that curiosity turned into late nights spent debugging JavaScript errors and falling in love with how code could bring ideas to life.
+- Optimized build process generating static assets
+- Pre-rendered pages for maximum performance
+- Edge-deployed static files for global CDN distribution
 
-I started building side projects, contributing to open source, and slowly leveling up. My first "real" job involved wrangling legacy jQuery code. It wasn't glamorous, but it taught me the fundamentals — and just how far modern frameworks have come.
+### Content Management
 
-Since then, I've worked across startups and mid-sized teams, shipped production code to thousands of users, and mentored new developers along the way.
+- **MDX-Driven Content**: Combine Markdown with React components
+- **Content Categories**:
+  - Docs
+  - Blog
+  - Guides and tutorials
+  - Landing pages with conversion elements
+  - Static information pages
 
-### Socials
+### Developer Experience
 
-- Twitter [@yourname](https://twitter.com/yourname)
-- GitHub [@yourname](https://github.com/yourname)
-- Instagram [@yourname](https://instagram.com/yourname)
-- Email your@name.com
+- TypeScript throughout the codebase
+- Modular architecture with clear separation of concerns
+- Well-defined component interfaces and type safety
 
-## Journey 2
+### User Experience
 
-I didn't grow up writing code. In fact, I didn't even know what a `<div>` was until much later. My curiosity started with tweaking themes on forums, editing little bits of CSS without knowing what CSS even meant.
+- **Search Functionality**
+  - Full-text search across all content types
+  - Faceted filtering by content type
+  - Search analytics for content improvement
+- **Navigation**
+  - Auto-generated table of contents
+  - Related content suggestions
 
-Eventually, that curiosity turned into late nights spent debugging JavaScript errors and falling in love with how code could bring ideas to life.
+### Performance Optimizations
 
-I started building side projects, contributing to open source, and slowly leveling up. My first "real" job involved wrangling legacy jQuery code. It wasn't glamorous, but it taught me the fundamentals — and just how far modern frameworks have come.
+- Image optimization and lazy loading
+- Code splitting and bundle optimization
+- Caching strategies for static content
 
-Since then, I've worked across startups and mid-sized teams, shipped production code to thousands of users, and mentored new developers along the way.
+### SEO & Social
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- Structured data for search engines
+- Open Graph and Twitter card metadata
+- XML sitemaps and RSS feeds
 
-### Journey 3
+### User Engagement
 
-I didn't grow up writing code. In fact, I didn't even know what a `<div>` was until much later. My curiosity started with tweaking themes on forums, editing little bits of CSS without knowing what CSS even meant.
+- **Comments System**
+  - GitHub-based commenting system
+  - Moderation tools
+- **Subscription Management**
+  - Newsletter sign-up forms
+  - Update notifications
 
-Eventually, that curiosity turned into late nights spent debugging JavaScript errors and falling in love with how code could bring ideas to life.
+## Build-Time Generation
 
-I started building side projects, contributing to open source, and slowly leveling up. My first "real" job involved wrangling legacy jQuery code. It wasn't glamorous, but it taught me the fundamentals — and just how far modern frameworks have come.
+All content is processed and optimized at build time:
 
-Since then, I've worked across startups and mid-sized teams, shipped production code to thousands of users, and mentored new developers along the way.
-
-<Button appName="oss-static" className="bg-green-200 p-2">
-  Test Button
-</Button>
+- Static HTML generation for all pages
+- Asset optimization and bundling
+- Image processing and responsive sizes
+- Sitemap and metadata generation
+- Search index creation
 
 </MdxLayout>
