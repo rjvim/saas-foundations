@@ -13,6 +13,9 @@ export default async function Page(props: {
 }) {
   const params = await props.params;
   const page = blogSource.getPage([params.slug]);
+  const lastModified = page?.data.lastModified;
+  const lastUpdate = lastModified ? new Date(lastModified) : undefined;
+  const tags = page?.data.tags ?? [];
 
   if (!page) notFound();
   const MDX = page.data.body;
@@ -21,11 +24,13 @@ export default async function Page(props: {
     <DocsPage
       toc={page.data.toc}
       full={page.data.full}
+      lastUpdate={lastUpdate}
       footer={{
         enabled: false,
       }}
       tableOfContent={{
         style: "clerk",
+        single: false,
       }}
       article={{
         className: "!max-w-[1120px]",
