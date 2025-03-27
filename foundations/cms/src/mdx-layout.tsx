@@ -1,4 +1,4 @@
-import type { TOCItemType } from "fumadocs-core/server";
+import type { TableOfContents, TOCItemType } from "fumadocs-core/server";
 import { InlineTOC } from "fumadocs-ui/components/inline-toc";
 import type { ReactNode } from "react";
 import { cn } from "@foundations/shadcn/lib/utils";
@@ -10,7 +10,7 @@ import { GridBackground } from "@workspace/ui/grid-background";
 interface MdxLayoutProps {
   children: ReactNode;
   title: string;
-  toc?: TOCItemType[] | null;
+  toc?: TableOfContents;
 }
 
 const PageHeader = ({
@@ -36,7 +36,10 @@ export default function MdxLayout({
     <>
       <DocsLayout
         nav={{ enabled: false }}
-        tree={sortedByDatePageTree}
+        tree={{
+          name: "JustMDX",
+          children: [],
+        }}
         sidebar={{ enabled: false, prefetch: false, tabs: false }}
         containerProps={{
           className: "relative max-w-7xl mx-auto md:[--fd-nav-height:59px]",
