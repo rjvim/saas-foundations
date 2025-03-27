@@ -20,7 +20,7 @@ export const {
   pageTree: pageBlogTree,
 } = blogSource;
 
-export type Post = ReturnType<typeof getBlogPost>;
+export type BlogPost = ReturnType<typeof getBlogPost>;
 
 const posts = getBlogPosts();
 
