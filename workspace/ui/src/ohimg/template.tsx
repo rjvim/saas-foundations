@@ -8,10 +8,10 @@ import { cn } from "@foundations/shadcn/lib/utils";
 
 export const ohimgConfig: OhImgBaseTemplateProps = {
   content: {
-    title: "Every webpage deserves it's own open graph image",
+    title: "NextJS Template for OSS Projects",
     description:
-      "Generate beautiful open graph images for your website with Ohimg. Customize the template to match your brand.",
-    website: "ohimg.dev",
+      "All templates are not made same. SaaS Foundations templates are built beautifully and you can upgrade them.",
+    website: "github.com/rjvim/saas-foundations",
     tags: ["open graph", "image", "generator"],
   },
   gradient: {

@@ -11,7 +11,7 @@ export const size = {
 
 export const contentType = "image/png";
 export const dynamic = "force-static";
-export const revalidate = 3600; // Revalidate every hour (or your preferred interval)
+export const revalidate = false; // Revalidate every hour (or your preferred interval)
 
 const imageOptions: ImageResponseOptions = {
   width: 1200,
