@@ -7,6 +7,7 @@ import {
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
+import { createMetadata } from "@workspace/config/metadata";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -48,8 +49,17 @@ export async function generateMetadata(props: {
   const page = docsSource.getPage(params.slug);
   if (!page) notFound();
 
-  return {
-    title: page.data.title,
-    description: page.data.description,
-  };
+  const title = page.data.title;
+  const description = page.data.description;
+
+  return createMetadata({
+    title,
+    description,
+    openGraph: {
+      url: page.url,
+    },
+    alternates: {
+      canonical: page.url,
+    },
+  });
 }
