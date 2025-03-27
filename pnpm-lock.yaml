@@ -554,6 +554,9 @@ importers:
       '@workspace/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../ui
       eslint:
         specifier: ^9.22.0
         version: 9.22.0(jiti@2.4.2)
