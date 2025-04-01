@@ -26,6 +26,7 @@
     "@foundations/shadcn": "workspace:*",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@xyflow/react": "^12.5.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.5.0",
     "glsl-canvas-js": "^0.2.9",

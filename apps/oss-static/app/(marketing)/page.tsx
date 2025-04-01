@@ -1,4 +1,5 @@
 import MinimalGridFeatures from "@workspace/ui/features/minimal-grid";
+import { GanttExample } from "@workspace/ui/flow-gantt";
 import GanttDemo from "@workspace/ui/gantt-demo";
 import AnimatedHero from "@workspace/ui/heros/animated-hero";
 
@@ -55,7 +56,8 @@ export default function HomePage() {
     <div>
       <AnimatedHero />
       <div className="max-w-7xl px-4 mx-auto">
-        <GanttDemo />
+        {/* <GanttDemo /> */}
+        <GanttExample />
       </div>
       <MinimalGridFeatures features={defaultFeatures} />
     </div>
