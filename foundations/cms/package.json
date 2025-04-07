@@ -40,7 +40,7 @@
     "@workspace/ui": "workspace:*",
     "@workspace/config": "workspace:*",
     "fumadocs-core": "^15.1.2",
-    "fumadocs-mdx": "^11.5.7",
+    "fumadocs-mdx": "^11.5.8",
     "fumadocs-twoslash": "^3.1.0",
     "fumadocs-ui": "^15.1.2",
     "lucide-react": "^0.484.0",
