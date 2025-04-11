@@ -1,12 +1,12 @@
 /** @type {import('next-sitemap').IConfig} */
 
 const baseUrl =
-  process.env.NODE_ENV === "development" ||
-  !process.env.VERCEL_PROJECT_PRODUCTION_URL
+  process.env.NODE_ENV === "development" || !process.env.NEXT_PUBLIC_SITE_URL
     ? new URL("https://localhost:3000")
-    : new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+    : new URL(`https://${process.env.NEXT_PUBLIC_SITE_URL}`);
 
 module.exports = {
+  outDir: "out",
   siteUrl: baseUrl,
   generateRobotsTxt: true,
   transform: async (config, path) => {
@@ -31,7 +31,7 @@ module.exports = {
  * @returns {boolean} - True if the path should be ignored
  */
 function customIgnoreFunction(path) {
-  const pathsToIgnore = ["/api/"];
+  const pathsToIgnore = ["/api/", "opengraph-image-", "blogs-og"];
 
   return pathsToIgnore.some((pattern) => path.includes(pattern));
 }
