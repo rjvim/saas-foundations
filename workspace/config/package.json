@@ -16,8 +16,8 @@
   "devDependencies": {
     "@turbo/gen": "^2.4.4",
     "@types/node": "^22.13.9",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "19.0.4",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "19.1.2",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
     "@workspace/ui": "workspace:*",
@@ -25,13 +25,13 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
-    "fumadocs-core": "^15.1.2",
-    "fumadocs-ui": "^15.1.2",
+    "fumadocs-core": "^15.2.6",
+    "fumadocs-ui": "^15.2.6",
     "glsl-canvas-js": "^0.2.9",
-    "lucide-react": "^0.484.0",
+    "lucide-react": "^0.487.0",
     "motion": "^12.5.0",
-    "next": "^15.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
