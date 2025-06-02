@@ -30,7 +30,7 @@
     "glsl-canvas-js": "^0.2.9",
     "lucide-react": "^0.487.0",
     "motion": "^12.5.0",
-    "next": "^15.3.0",
+    "next": "^15.3.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
