@@ -22,7 +22,7 @@
     "@types/mdx": "^2.0.13",
     "@workspace/config": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "fumadocs-core": "^15.2.6",
+    "fumadocs-core": "^15.5.2",
     "fumadocs-mdx": "^11.5.8",
     "fumadocs-twoslash": "^3.1.0",
     "fumadocs-ui": "^15.2.6",
