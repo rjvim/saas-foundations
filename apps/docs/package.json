@@ -14,12 +14,12 @@
   "dependencies": {
     "@workspace/ui": "workspace:*",
     "next": "^15.3.0",
-    "react": "^19.1.0",
+    "react": "^19.1.1",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.13.9",
-    "@types/react": "^19.1.0",
+    "@types/react": "^19.1.9",
     "@types/react-dom": "19.1.2",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
